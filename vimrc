@@ -1,51 +1,71 @@
 set nocompatible
 execute pathogen#infect()
-autocmd VimEnter * NERDTree
 syntax on
 filetype plugin indent on
+autocmd VimEnter * NERDTree
 
-set history=700
-set autoread
-set number
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+set encoding=utf-8
+set scrolloff=3
+set autoindent
+set showmode
+set showcmd
+set hidden
+set wildmenu
+set wildmode=list:longest
+set visualbell
+set cursorline
+set ttyfast
+set ruler
+set backspace=indent,eol,start
+set laststatus=2
+set relativenumber
+set undofile
 
 let mapleader = ","
 let g:mapleader = ","
 
-set autoread
-
-nmap <leader>w :w!<cr>
-
-set so=7
-set wildmenu
-set ruler
-set cmdheight=2
-set hid
-set backspace=eol,start,indent
-set whichwrap+=<,>,h,l
+nnoremap / /\v
+vnoremap / /\v
 set ignorecase
 set smartcase
-set hlsearch
+set gdefault
 set incsearch
-set lazyredraw
-set magic
 set showmatch
-set mat=2
+set hlsearch
+nnoremap <leader><space> :noh<cr>
+nnoremap <tab> %
+nnoremap <tab> %
 
-colorscheme desert
-set background=dark
-set encoding=utf-8
-set ffs=unix,dos,mac
-
-set nobackup
-set nowb
-set noswapfile
-
-set expandtab
-set smarttab
-set shiftwidth=4
-set tabstop=4
-set lbr
-set tw=500
-set ai
-set si
 set wrap
+set textwidth=79
+set formatoptions=qrn1
+set colorcolumn=85
+
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
+nnoremap j gj
+nnoremap k gk
+
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+
+nnoremap ; :
+
+au FocusLost * :wa
+
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <leader>ft Vatzf
+nnoremap <leader>v V`]
