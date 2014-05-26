@@ -18,12 +18,11 @@ set hidden
 set wildmenu
 set wildmode=list:longest
 set visualbell
-set cursorline
 set ttyfast
 set ruler
 set backspace=indent,eol,start
 set laststatus=2
-set relativenumber
+set number
 set undofile
 
 let mapleader = ","
@@ -44,7 +43,6 @@ nnoremap <tab> %
 set wrap
 set textwidth=79
 set formatoptions=qrn1
-set colorcolumn=85
 
 nnoremap <up> <nop>
 nnoremap <down> <nop>
