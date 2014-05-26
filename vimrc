@@ -4,6 +4,8 @@ syntax on
 filetype plugin indent on
 autocmd VimEnter * NERDTree
 
+colors grayorange
+
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
