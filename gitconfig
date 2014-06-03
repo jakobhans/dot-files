@@ -1,0 +1,10 @@
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    st = status -sb
+[color]
+	ui = true
+[user]
+	name = Jakob H. Renpening
+	email = jakobhans@gmail.com
+[core]
+	excludesfile = /Users/jakobhans/.gitignore_global
