@@ -70,3 +70,6 @@ au FocusLost * :wa
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap <leader>ft Vatzf
 nnoremap <leader>v V`]
+
+" associate *.ctp with html filetype
+au BufRead,BufNewFile *.ctp setfiletype html
