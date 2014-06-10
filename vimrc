@@ -72,5 +72,5 @@ nnoremap <leader>ft Vatzf
 nnoremap <leader>v V`]
 
 " associate *.ctp with html filetype
-au BufRead,BufNewFile *.ctp setfiletype html
+au BufRead,BufNewFile *.ctp setfiletype=html
 let NERDTreeShowHidden=1
