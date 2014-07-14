@@ -1,4 +1,14 @@
+# Stupid Apple
 *.DS_Store
+
+# VIM
 *~
 *.swp
 *.swo
+
+# Vagrant
+/Vagrantfile
+/.vagrant
+boxes/*
+acceptance_config.yml
+/vagrant-spec.config.rb
