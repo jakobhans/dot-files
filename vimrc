@@ -4,6 +4,10 @@ syntax on
 filetype plugin indent on
 autocmd VimEnter * NERDTree
 
+set omnifunc=syntaxcomplete#Complete
+set completeopt=longest,menuone
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
 colors asmdev
 
 set tabstop=4
