@@ -10,6 +10,9 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 colors asmdev
 
+set t_Co=256
+let g:Powerline_symbols = "fancy" 
+
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
