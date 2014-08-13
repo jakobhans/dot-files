@@ -80,5 +80,7 @@ nnoremap <leader>v V`]
 
 " associate *.ctp with html filetype
 au BufRead,BufNewFile *.ctp set filetype=php
+
+" NERDTree stuff
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.swp$','\.un\~']
