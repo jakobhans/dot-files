@@ -2,7 +2,6 @@ set nocompatible
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
-autocmd VimEnter * NERDTree
 
 set omnifunc=syntaxcomplete#Complete
 set completeopt=longest,menuone
