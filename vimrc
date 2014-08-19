@@ -3,8 +3,6 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-set omnifunc=syntaxcomplete#Complete
-set completeopt=longest,menuone
 
 "neocomplete stuff
 let g:acp_enableAtStartup = 0
@@ -40,6 +38,8 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 if !exists('g:neocomplete#sources#omni#input_patterns')
     let g:neocomplete#sources#omni#input_patterns = {}
 endif
+set omnifunc=syntaxcomplete#Complete
+set completeopt=longest,menuone
 
 colors asmdev
 
@@ -111,8 +111,9 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 nnoremap <leader>ft Vatzf
 nnoremap <leader>v V`]
 
-" associate *.ctp with html filetype
-au BufRead,BufNewFile *.ctp set filetype=php
+" File associations
+au BufRead,BufNewFile *.ctp set filetype=phtml
+au BufRead,BufNewFile *.php set filetype=phtml
 
 " NERDTree stuff
 let NERDTreeShowHidden=1
