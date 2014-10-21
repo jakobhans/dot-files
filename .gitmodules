@@ -22,3 +22,6 @@
 [submodule "vim/bundle/sparkup"]
 	path = vim/bundle/sparkup
 	url = git@github.com:rstacruz/sparkup.git
+[submodule "vim/bundle/phpcomplete.vim"]
+	path = vim/bundle/phpcomplete.vim
+	url = git@github.com:shawncplus/phpcomplete.vim.git
