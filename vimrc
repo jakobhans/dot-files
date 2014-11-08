@@ -111,8 +111,8 @@ nnoremap <leader>ft Vatzf
 nnoremap <leader>v V`]
 
 " File associations
-au BufRead,BufNewFile *.ctp set filetype=phtml
-au BufRead,BufNewFile *.php set filetype=phtml
+au BufRead,BufNewFile *.ctp set filetype=html
+au BufRead,BufNewFile *.blade.php set filetype=html
 
 " NERDTree stuff
 let NERDTreeShowHidden=1
