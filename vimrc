@@ -3,6 +3,10 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+"Powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 
 "neocomplete stuff
 let g:acp_enableAtStartup = 0
@@ -44,7 +48,7 @@ set completeopt=longest,menuone
 colors asmdev
 
 set t_Co=256
-let g:Powerline_symbols = "fancy" 
+set guifont=Source\ Code\ Pro\ for\ Powerline:h13
 
 set tabstop=4
 set shiftwidth=4
