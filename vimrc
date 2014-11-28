@@ -45,6 +45,16 @@ endif
 set omnifunc=syntaxcomplete#Complete
 set completeopt=longest,menuone
 
+"FastFold settings
+set foldmethod=syntax
+let g:tex_fold_enabled=1
+let g:vimsyn_folding='af'
+let g:xml_syntax_folding=1
+let g:php_folding=1
+
+"restore_view settings
+set viewoptions=cursor,folds,slash,unix
+
 colors asmdev
 
 set t_Co=256
