@@ -86,6 +86,7 @@ let g:mapleader = ","
 
 nnoremap / /\v
 vnoremap / /\v
+set nohlsearch
 set ignorecase
 set smartcase
 set gdefault
