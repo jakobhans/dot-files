@@ -46,7 +46,7 @@ set omnifunc=syntaxcomplete#Complete
 set completeopt=longest,menuone
 
 "FastFold settings
-set foldmethod=syntax
+set foldmethod=manual
 let g:tex_fold_enabled=1
 let g:vimsyn_folding='af'
 let g:xml_syntax_folding=1
