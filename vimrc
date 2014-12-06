@@ -45,6 +45,9 @@ endif
 set omnifunc=syntaxcomplete#Complete
 set completeopt=longest,menuone
 
+"CtrlP show hidden files
+let g:ctrlp_show_hidden = 1
+
 "FastFold settings
 set foldmethod=manual
 let g:tex_fold_enabled=1
