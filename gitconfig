@@ -8,3 +8,4 @@
 	email = jakobhans@gmail.com
 [core]
 	excludesfile = /Users/jakobhans/.gitignore_global
+    editor = vim
