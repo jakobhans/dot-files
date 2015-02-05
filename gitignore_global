@@ -9,7 +9,6 @@
 *.swo
 
 # Vagrant
-/Vagrantfile
 /.vagrant
 boxes/*
 acceptance_config.yml
