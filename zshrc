@@ -46,7 +46,7 @@ plugins=(brew git sublime)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.composer/vendor/bin:$PATH
 
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
