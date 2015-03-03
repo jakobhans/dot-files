@@ -48,13 +48,6 @@ set completeopt=longest,menuone
 "CtrlP show hidden files
 let g:ctrlp_show_hidden = 1
 
-"FastFold settings
-set foldmethod=manual
-let g:tex_fold_enabled=1
-let g:vimsyn_folding='af'
-let g:xml_syntax_folding=1
-let g:php_folding=1
-
 "restore_view settings
 set viewoptions=cursor,folds,slash,unix
 
