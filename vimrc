@@ -124,7 +124,3 @@ nnoremap <leader>v V`]
 " File associations
 au BufRead,BufNewFile *.ctp set filetype=html
 au BufRead,BufNewFile *.blade.php set filetype=html
-
-" NERDTree stuff
-let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\.swp$','\.un\~']
