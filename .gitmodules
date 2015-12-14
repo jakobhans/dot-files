@@ -22,3 +22,6 @@
 [submodule "vim/bundle/restore_view.vim"]
 	path = vim/bundle/restore_view.vim
 	url = git@github.com:vim-scripts/restore_view.vim.git
+[submodule "vim/bundle/vim-blade"]
+	path = vim/bundle/vim-blade
+	url = git://github.com/xsbeats/vim-blade.git
