@@ -73,6 +73,7 @@ set wildmode=list:longest
 set visualbell
 set ttyfast
 set ruler
+set cursorline
 set backspace=indent,eol,start
 set laststatus=2
 set number
