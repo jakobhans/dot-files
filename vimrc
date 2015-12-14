@@ -74,6 +74,7 @@ set visualbell
 set ttyfast
 set ruler
 set cursorline
+hi CursorLine cterm=bold ctermbg=235 
 set backspace=indent,eol,start
 set laststatus=2
 set number
