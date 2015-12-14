@@ -1,6 +1,12 @@
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     st = status -sb
+    c = commit
+    p = push
+    b = branch
+    d = diff
+    m = merge
+    f = fetch
 [color]
 	ui = true
 [user]
