@@ -4,9 +4,9 @@ syntax on
 filetype plugin indent on
 
 "Powerline
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+"python from powerline.vim import setup as powerline_setup
+"python powerline_setup()
+"python del powerline_setup
 
 "neocomplete stuff
 let g:acp_enableAtStartup = 0
