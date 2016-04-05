@@ -3,6 +3,9 @@
 # Stupid Apple
 *.DS_Store
 
+#Git ftp temp file
+.git-ftp-tmp
+
 # VIM
 *~
 *.swp
