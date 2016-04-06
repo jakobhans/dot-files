@@ -54,3 +54,6 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # Personal aliases (Override those of oh-my-zsh.sh file above)
 alias ls='ls -lahG'
 alias vi='vim'
+
+# Adding powerline support
+. /home/jakobhans/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
