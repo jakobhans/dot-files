@@ -55,7 +55,7 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH=$PATH:$HOME/.local/bin
 
 # Personal aliases (Override those of oh-my-zsh.sh file above)
-alias ls='ls -lahG'
+alias ls='ls -lahG --color=auto'
 alias vi='vim'
 
 # Adding powerline support
