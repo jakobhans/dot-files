@@ -51,6 +51,9 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
+#Path updated for pip packages
+export PATH=$PATH:$HOME/.local/bin
+
 # Personal aliases (Override those of oh-my-zsh.sh file above)
 alias ls='ls -lahG'
 alias vi='vim'
