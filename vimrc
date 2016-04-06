@@ -51,7 +51,7 @@ let g:ctrlp_show_hidden = 1
 "restore_view settings
 set viewoptions=cursor,folds,slash,unix
 
-colors asmdev
+colors tayra
 
 set t_Co=256
 set guifont=Source\ Code\ Pro\ for\ Powerline:h13
