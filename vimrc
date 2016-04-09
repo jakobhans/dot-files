@@ -54,7 +54,6 @@ set viewoptions=cursor,folds,slash,unix
 colors tayra
 
 set t_Co=256
-set guifont=Source\ Code\ Pro\ for\ Powerline:h13
 
 set tabstop=4
 set shiftwidth=4
