@@ -5,7 +5,6 @@ setopt AUTO_NAME_DIRS
 setopt PUSHD_TO_HOME
 setopt RM_STAR_WAIT
 setopt ZLE
-setopt VI
 
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 export PATH=$PATH:$HOME/.local/bin
