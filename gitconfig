@@ -8,6 +8,7 @@
     d = diff
     m = merge
     f = fetch
+    ftp = ftp push
 [color]
 	ui = true
 [user]
