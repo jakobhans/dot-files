@@ -5,7 +5,6 @@ export PATH=$PATH:$HOME/.local/bin
 
 alias zshconfig='vi ~/.zshrc'
 alias ls='pwd; ls -lahG --color | more'
-alias vi='vim'
 alias g='git'
 
 for c in cp rm chmod chown rename; do
