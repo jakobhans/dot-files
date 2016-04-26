@@ -1,7 +1,6 @@
 setopt NO_CASE_GLOB
 
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
-export PATH=$PATH:$HOME/.local/bin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.local/bin:$HOME/.npm-global/bin:$PATH
 
 alias zshconfig='vi ~/.zshrc'
 alias ls='pwd; ls -lahG --color | more'
