@@ -1,4 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/Users/jakobhans/Sites/faret/faret_invoice'
 let g:netrw_dirhist_2='/home/jakobhans/Sites/faret_web'
+let g:netrw_dirhist_3='/home/jakobhans/dot-files'
+let g:netrw_dirhist_4='/home/jakobhans/development/php-the-right-way/.bundle'

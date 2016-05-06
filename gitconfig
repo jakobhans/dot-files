@@ -16,7 +16,7 @@
 	name = Jakob H. Renpening
 	email = jakobhans@gmail.com
 [core]
-	excludesfile = /Users/jakobhans/.gitignore_global
+	excludesfile = /home/jakobhans/.gitignore_global
     editor = vim
 [push]
 	default = simple
