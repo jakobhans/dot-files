@@ -21,7 +21,7 @@ zstyle ':completion:*' group-name ''
 zstyle ':completion:*' auto-description 'specify: %d'
 
 # Adding powerline support
-. /home/jakobhans/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+. /home/jakobhans/powerline_files/bindings/zsh/powerline.zsh
 
 # Autostart tmux with oh-my-zsh tmux plugin
 source dot-files/tmux.plugin.zsh
