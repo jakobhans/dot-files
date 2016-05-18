@@ -77,6 +77,7 @@ hi CursorLine cterm=bold ctermbg=234
 set backspace=indent,eol,start
 set laststatus=2
 set number
+set relativenumber
 
 let mapleader = ","
 let g:mapleader = ","
