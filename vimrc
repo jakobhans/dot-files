@@ -3,11 +3,6 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-"Powerline
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
-
 "neocomplete stuff
 let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
@@ -78,6 +73,9 @@ set backspace=indent,eol,start
 set laststatus=2
 set number
 set relativenumber
+
+"Status line stuff
+set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 
 let mapleader = ","
 let g:mapleader = ","
