@@ -3,7 +3,8 @@ setopt NO_CASE_GLOB
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.local/bin:$HOME/.npm-global/bin:$PATH
 
 alias zshconfig='vi ~/.zshrc'
-alias ls='pwd; ls -lahG --color | more'
+alias ls='pwd; ls -a --color'
+alias lsl='pwd; ls -lahG --color | more'
 alias g='git'
 
 for c in cp rm chmod chown rename; do
