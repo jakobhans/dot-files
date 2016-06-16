@@ -1,3 +1,7 @@
+if [[ $(git -C ~/dot-files rev-parse --abbrev-ref HEAD) != "arch" ]]; then
+    git -C ~/dot-files checkout arch
+fi
+
 # Path to your oh-my-zsh installation.
   export ZSH=$HOME/.oh-my-zsh
 
@@ -50,7 +54,6 @@ ZSH_THEME="gallois"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git tmux)
-ZSH_TMUX_AUTOSTART="true"
 
 # User configuration
 export GOPATH=$HOME/.gopath
@@ -92,6 +95,7 @@ alias zshconfig='vi ~/.zshrc'
 alias ls='pwd; ls -a --color'
 alias lsl='pwd; ls -lahG --color | more'
 alias g='git'
+alias vi='vim'
 
 #Description after some actions
 for c in cp rm chmod chown rename; do
@@ -108,3 +112,4 @@ zstyle ':completion:*' group-name ''
 
 zstyle ':completion:*' auto-description 'specify: %d'
 
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx
