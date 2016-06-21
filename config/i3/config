@@ -179,12 +179,20 @@ bar {
 # Custom stuff
 exec --no-startup-id pulseaudio --start
 exec --no-startup-id xrdb -merge -I ~/.Xresources
-exec --no-startup-id feh --bg-fill /home/jakobhans/current_theme/bg.png
+exec --no-startup-id feh --bg-fill /home/jakobhans/current-theme/bg.jpg
 
 # Custom mappings
+# Volume
 bindsym XF86AudioRaiseVolume exec --no-startup-id /usr/bin/pulseaudio-ctl up
 bindsym XF86AudioLowerVolume exec --no-startup-id /usr/bin/pulseaudio-ctl down 
 bindsym XF86AudioMute exec --no-startup-id /usr/bin/pulseaudio-ctl mute 
+
+#Brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+
+# Scrot as PrintScreen
+bindsym Print exec scrot -e 'mv $f ~/shared/Screenshots'
 
 # Gaps requirement
 for_window [class="^.*"] border pixel 0
