@@ -97,6 +97,7 @@ alias zshconfig='vi ~/.zshrc'
 alias ls='pwd; ls -a --color'
 alias lsl='pwd; ls -lahG --color | more'
 alias g='git'
+alias startx='ssh-agent startx'
 
 #Description after some actions
 for c in cp rm chmod chown rename; do

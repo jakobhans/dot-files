@@ -94,11 +94,11 @@ bindsym $mod+a focus parent
 
 # Name the workspaces
 set $tag1 "1: www"
-set $tag2 "2: code"
-set $tag3 "3: term"
+set $tag2 "2: term"
+set $tag3 "3: code"
 set $tag4 "4: im"
-set $tag5 "5: av"
-set $tag6 "6: music"
+set $tag6 "5: music"
+set $tag5 "6: av"
 
 # switch to workspace
 bindsym $mod+1 workspace $tag1
@@ -187,9 +187,15 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id /usr/bin/pulseaudio-ctl up
 bindsym XF86AudioLowerVolume exec --no-startup-id /usr/bin/pulseaudio-ctl down 
 bindsym XF86AudioMute exec --no-startup-id /usr/bin/pulseaudio-ctl mute 
 
-#Brightness
+# Brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+
+# Play / Pause Button
+
+
+# Toggle Touchpad
+bindsym XF86TouchpadToggle exec /usr/local/bin/touchpad_toggle.sh
 
 # Scrot as PrintScreen
 bindsym Print exec scrot -e 'mv $f ~/shared/Screenshots'
