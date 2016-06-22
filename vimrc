@@ -40,9 +40,9 @@ let g:ctrlp_show_hidden = 1
 "restore_view settings
 set viewoptions=cursor,folds,slash,unix
 
-colors tayra
-
 set t_Co=256
+
+colors tayra
 
 set tabstop=4
 set shiftwidth=4
