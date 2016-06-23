@@ -209,5 +209,4 @@ for_window [class="^.*"] border pixel 0
 smart_borders on
 
 # Styling
-gaps inner 10
-gaps outer 10
+gaps inner 25
