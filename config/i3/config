@@ -94,12 +94,12 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # Name the workspaces
-set $tag1 "1: www"
-set $tag2 "2: code"
-set $tag3 "3: term"
-set $tag4 "4: im"
-set $tag5 "5: music"
-set $tag6 "6: av"
+set $tag1 "1/www"
+set $tag2 "2/code"
+set $tag3 "3/term"
+set $tag4 "4/im"
+set $tag5 "5/music"
+set $tag6 "6/av"
 
 # switch to workspace
 bindsym $mod+1 workspace $tag1
@@ -187,24 +187,33 @@ bindsym Print exec scrot -e 'mv $f ~/shared/Screenshots'
 # finds out, if available)
 bar {
         colors {
-            background #232323
-            statusline #DCDCDC
-            separator #666666
+            background #111111
+            statusline #CCCCCC
+            separator #444444
 
             focused_workspace   #008fff #007fff #ffffff
             active_workspace    #333333 #5f676a #ffffff
-            inactive_workspace  #333333 #222222 #888888
+            inactive_workspace  #666666 #333333 #AAAAAA
             urgent_workspace    #aa0000 #990000 #ffffff
         }
 
         position top
+        height 35
         status_command i3status
+        font pango:Droid Sans Mono 9
         tray_output LVDS
 }
 
+client.focused          #deded6 #deded6 #deded6 #deded6
+client.focused_inactive #2b3135 #2b3135 #2b3135 #2b3135
+client.unfocused        #2b3135 #2b3135 #2b3135 #2b3135
+client.urgent           #deded6 #deded6 #deded6 #deded6
+client.background       #deded6
+
+new_window pixel 1
+new_float pixel 1
 
 # Gaps requirement
-for_window [class="^.*"] border pixel 0
 
 smart_borders on
 
