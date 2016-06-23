@@ -9,7 +9,7 @@
 general {
         colors = true
         color_good = "#99FF99"
-        color_bad = "#CC1616"
+        color_bad = "#FF7777"
         color_degraded = "#55858E"
         interval = 2
 }
@@ -25,7 +25,7 @@ order += "battery 0"
 order += "tztime local"
 
 volume master {
-        format = " ♪ %volume "
+        format = "♪ %volume"
         device = "default"
         mixer = "master"
         mixer_idx = 0

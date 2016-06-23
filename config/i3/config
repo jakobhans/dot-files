@@ -95,8 +95,8 @@ bindsym $mod+a focus parent
 
 # Name the workspaces
 set $tag1 "1: www"
-set $tag2 "2: term"
-set $tag3 "3: code"
+set $tag2 "2: code"
+set $tag3 "3: term"
 set $tag4 "4: im"
 set $tag5 "5: music"
 set $tag6 "6: av"
@@ -158,25 +158,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        colors {
-            background #232323
-            statusline #DCDCDC
-            separator #666666
-
-            focused_workspace   #008fff #007fff #ffffff
-            active_workspace    #333333 #5f676a #ffffff
-            inactive_workspace  #333333 #222222 #888888
-            urgent_workspace    #aa0000 #990000 #ffffff
-        }
-
-        position top
-        status_command i3status
-        tray_output LVDS
-}
-
 # Custom stuff
 exec --no-startup-id pulseaudio --start
 exec --no-startup-id xrdb -merge -I ~/.Xresources
@@ -200,6 +181,27 @@ bindsym XF86TouchpadToggle exec /usr/local/bin/touchpad_toggle.sh
 
 # Scrot as PrintScreen
 bindsym Print exec scrot -e 'mv $f ~/shared/Screenshots'
+
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+        colors {
+            background #232323
+            statusline #DCDCDC
+            separator #666666
+
+            focused_workspace   #008fff #007fff #ffffff
+            active_workspace    #333333 #5f676a #ffffff
+            inactive_workspace  #333333 #222222 #888888
+            urgent_workspace    #aa0000 #990000 #ffffff
+        }
+
+        position top
+        status_command i3status
+        tray_output LVDS
+}
+
 
 # Gaps requirement
 for_window [class="^.*"] border pixel 0
