@@ -98,6 +98,7 @@ alias ls='pwd; ls -a --color'
 alias lsl='pwd; ls -lahG --color | more'
 alias g='git'
 alias startx='ssh-agent startx'
+alias chromium='chromium --force-device-scale-factor=1.25'
 
 #Description after some actions
 for c in cp rm chmod chown rename; do
