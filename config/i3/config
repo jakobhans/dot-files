@@ -35,31 +35,14 @@ bindsym $mod+Return exec terminator
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
+# start rofi (a program launcher)
 bindsym $mod+d exec rofi -show run -eh 2
-
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-
-# change focus
-#bindsym $mod+j focus left
-#bindsym $mod+k focus down
-#bindsym $mod+l focus up
-#bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
-
-# move focused window
-#bindsym $mod+Shift+j move left
-#bindsym $mod+Shift+k move down
-#bindsym $mod+Shift+l move up
-#bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -90,18 +73,17 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-# focus the child container
-#bindsym $mod+d focus child
-
 # Name the workspaces
-set $tag1 "1/www"
-set $tag2 "2/code"
-set $tag3 "3/term"
-set $tag4 "4/design"
-set $tag5 "5/im"
-set $tag6 "6/music"
-set $tag7 "7/av"
-set $tag8 "8/games"
+set $tag1 "1:www"
+set $tag2 "2:code"
+set $tag3 "3:term"
+set $tag4 "4:vm"
+set $tag5 "5:graphic"
+set $tag6 "6:im"
+set $tag7 "7:music"
+set $tag8 "8:av"
+set $tag9 "9:vg"
+set $tag10 "10:other"
 
 # switch to workspace
 bindsym $mod+1 workspace $tag1
@@ -112,8 +94,8 @@ bindsym $mod+5 workspace $tag5
 bindsym $mod+6 workspace $tag6
 bindsym $mod+7 workspace $tag7
 bindsym $mod+8 workspace $tag8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+9 workspace $tag9
+bindsym $mod+0 workspace $tag10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $tag1
@@ -124,8 +106,8 @@ bindsym $mod+Shift+5 move container to workspace $tag5
 bindsym $mod+Shift+6 move container to workspace $tag6
 bindsym $mod+Shift+7 move container to workspace $tag7
 bindsym $mod+Shift+8 move container to workspace $tag8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+9 move container to workspace $tag9
+bindsym $mod+Shift+0 move container to workspace $tag10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -135,17 +117,8 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
-mode "resize" {
+mode "RESIZE" {
         # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        #bindsym j resize shrink width 10 px or 10 ppt
-        #bindsym k resize grow height 10 px or 10 ppt
-        #bindsym l resize shrink height 10 px or 10 ppt
-        #bindsym semicolon resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 5 px or 5 ppt
@@ -158,7 +131,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "RESIZE"
 
 # Custom stuff
 exec --no-startup-id pulseaudio --start
@@ -167,16 +140,13 @@ exec --no-startup-id feh --bg-fill /home/jakobhans/current-theme/bg.jpg
 
 # Custom mappings
 # Volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id /usr/bin/pulseaudio-ctl up
-bindsym XF86AudioLowerVolume exec --no-startup-id /usr/bin/pulseaudio-ctl down 
-bindsym XF86AudioMute exec --no-startup-id /usr/bin/pulseaudio-ctl mute 
+bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ +5%"
+bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ -5%"
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # Brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
-
-# Play / Pause Button
-
 
 # Toggle Touchpad
 bindsym XF86TouchpadToggle exec /usr/local/bin/touchpad_toggle.sh
@@ -190,8 +160,9 @@ bindsym $mod+l exec i3lock-fancy -p
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+        i3bar_command i3bar -t
         colors {
-            background #333333
+            background #00000000
             statusline #EFEFEF
             separator #444444
 
@@ -222,4 +193,4 @@ smart_borders on
 
 # Styling
 gaps inner 12
-gaps outer 8
+gaps outer 10
