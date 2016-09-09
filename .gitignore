@@ -3,3 +3,8 @@
 *.swo
 
 vim/view/
+
+# lftp log and history files
+lftp/cwd_history
+lftp/rl_history
+lftp/transfer_log
