@@ -162,7 +162,7 @@ bar {
         i3bar_command i3bar -t
         colors {
             background $blue
-            statusline $blue
+            statusline $white
             separator $darkgray
 
 #                               BORDER      BACKGROUND  TEXT
