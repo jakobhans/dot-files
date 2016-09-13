@@ -26,8 +26,10 @@ URxvt.font: xft:Consolas-9
 URxvt.boldFont: xft:Consolas-10
 URxvt.letterSpace: -1
 
+URxvt.depth: 32
+URxvt.background: rgba:0049/0049/0049/c800
+!URxvt.background: #313131
 URxvt.foreground: #C8C8C8
-URxvt.background: #313131
 URxvt.color0:     #2E3436
 URxvt.color1:     #CC0000
 URxvt.color2:     #4E9A06
@@ -45,8 +47,6 @@ URxvt.color13:    #AD7FA8
 URxvt.color14:    #34E2E2
 URxvt.color15:    #EEEEEC
 
-URxvt.transparent: true
-URxvt.shading:     25
 URxvt.fading:      30
 
 URxvt.scrollBar:         false

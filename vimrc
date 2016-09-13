@@ -42,7 +42,7 @@ set viewoptions=cursor,folds,slash,unix
 
 set t_Co=256
 
-colors tayra
+colors sierra
 
 set tabstop=4
 set shiftwidth=4
