@@ -123,7 +123,7 @@ bindsym $mod+r mode "RESIZE"
 # Custom stuff
 exec --no-startup-id pulseaudio --start
 exec --no-startup-id xrdb -load ~/.Xresources
-exec_always --no-startup-id feh --bg-center /home/jakobhans/current-theme/bg.jpg
+exec_always --no-startup-id feh --bg-fill /home/jakobhans/current-theme/bg.jpg
 
 # Custom mappings
 # Volume
