@@ -4,7 +4,8 @@ set $mod Mod4
 
 set $blue       #131D24
 set $lightblue  #232D34
-set $lightgray  #DDEEDD
+set $lightgray  #DDDDDD
+set $gray       #909090
 set $darkgray   #444444
 set $white      #FFFFFF
 set $urgentred  #B33A3A
@@ -161,12 +162,12 @@ bar {
         i3bar_command i3bar -t
         colors {
             background $blue
-            statusline $lightgray
+            statusline $blue
             separator $darkgray
 
 #                               BORDER      BACKGROUND  TEXT
             focused_workspace   $white      $white      $lightblue
-            active_workspace    $white      $blue       $white
+            active_workspace    $gray       $gray       $lightblue
             inactive_workspace  $blue       $blue       $white
             urgent_workspace    $urgentred  $urgentred  $white
         }
