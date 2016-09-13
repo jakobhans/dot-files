@@ -2,8 +2,6 @@
 
 set $mod Mod4
 
-set $lime       #9FBC00
-set $darklime   #505E00
 set $blue       #131D24
 set $lightblue  #232D34
 set $lightgray  #DDEEDD
@@ -19,7 +17,7 @@ font pango: Consolas 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -125,7 +123,7 @@ bindsym $mod+r mode "RESIZE"
 # Custom stuff
 exec --no-startup-id pulseaudio --start
 exec --no-startup-id xrdb -load ~/.Xresources
-exec_always --no-startup-id feh --bg-fill /home/jakobhans/current-theme/bg.jpg
+exec_always --no-startup-id feh --bg-center /home/jakobhans/current-theme/bg.jpg
 
 # Custom mappings
 # Volume
@@ -156,15 +154,14 @@ bar {
             separator $darkgray
 
 #                               BORDER      BACKGROUND  TEXT
-            focused_workspace   $lightblue  $lightblue  $lime
-            active_workspace    $lightblue  $lightblue  $darklime
+            focused_workspace   $white      $white      $lightblue
+            active_workspace    $white      $blue       $white
             inactive_workspace  $blue       $blue       $white
             urgent_workspace    $urgentred  $urgentred  $white
         }
 
         position top
-        height 25
-        #status_command i3status
+        height 27
         status_command py3status -c ~/.config/i3/i3status.conf
         font pango:Droid Sans Mono 8
         tray_output none
