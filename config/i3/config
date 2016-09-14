@@ -5,7 +5,7 @@ set $mod Mod4
 set $blue       #131D24
 set $lightblue  #232D34
 set $lightgray  #DDDDDD
-set $gray       #909090
+set $gray       #A0A0A0
 set $darkgray   #444444
 set $white      #FFFFFF
 set $urgentred  #B33A3A

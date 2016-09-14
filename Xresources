@@ -1,10 +1,10 @@
 ! Rofi
-rofi.opacity: 50 
+rofi.opacity: 95
 rofi.color-enabled: true
-rofi.color-window: #273238, #273238, #1e2529
-rofi.color-normal: #273238, #c1c1c1, #273238, #394249, #ffffff
-rofi.color-active: #273238, #80cbc4, #273238, #394249, #80cbc4
-rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
+rofi.color-window: #393939, #393939, #268bd2
+rofi.color-normal: #393939, #ffffff, #393939, #268bd2, #ffffff
+rofi.color-active: #393939, #268bd2, #393939, #268bd2, #205171
+rofi.color-urgent: #393939, #f3843d, #393939, #268bd2, #ffc39c
 
 ! Fonts config
 Xft.dpi: 142
@@ -28,7 +28,6 @@ URxvt.letterSpace: -1
 
 URxvt.depth: 32
 URxvt.background: rgba:0049/0049/0049/c800
-!URxvt.background: #313131
 URxvt.foreground: #C8C8C8
 URxvt.color0:     #2E3436
 URxvt.color1:     #CC0000
