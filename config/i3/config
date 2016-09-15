@@ -66,7 +66,7 @@ set $tag1 "1:www"
 set $tag2 "2:code"
 set $tag3 "3:term"
 set $tag4 "4:vm"
-set $tag5 "5:graphic"
+set $tag5 "5:graph"
 set $tag6 "6:im"
 set $tag7 "7:music"
 set $tag8 "8:av"
@@ -161,21 +161,21 @@ bindsym $mod+l exec i3lock-fancy -p
 bar {
         i3bar_command i3bar -t
         colors {
-            background $blue
-            statusline $white
-            separator $darkgray
+            background  #20293A
+            statusline  #AAAAAA
+            separator   #566E9C
 
 #                               BORDER      BACKGROUND  TEXT
-            focused_workspace   $white      $white      $lightblue
-            active_workspace    $gray       $gray       $lightblue
-            inactive_workspace  $blue       $blue       $white
-            urgent_workspace    $urgentred  $urgentred  $white
+            focused_workspace   #20293A     #FCF5C7     #20293A
+            active_workspace    #FCF5C7     #20293A     #FCF5C7
+            inactive_workspace  #20293A     #20293A     #a0a0a0
+            urgent_workspace    #20293A     #20293A     #FCF5C7
         }
 
         position top
         height 27
         status_command py3status -c ~/.config/i3/i3status.conf
-        font pango:Droid Sans Mono 8
+        font pango:Droid Sans Mono 7
         tray_output none
 }
 
