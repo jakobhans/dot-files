@@ -162,36 +162,37 @@ bar {
         i3bar_command i3bar -t
         colors {
             background  #20293A
-            statusline  #AAAAAA
+            statusline  #FCF5C7
             separator   #566E9C
 
 #                               BORDER      BACKGROUND  TEXT
             focused_workspace   #20293A     #FCF5C7     #20293A
             active_workspace    #FCF5C7     #20293A     #FCF5C7
-            inactive_workspace  #20293A     #20293A     #a0a0a0
+            inactive_workspace  #20293A     #20293A     #A0A0A0
             urgent_workspace    #20293A     #20293A     #FCF5C7
         }
 
         position top
-        height 27
+        height 25
         status_command py3status -c ~/.config/i3/i3status.conf
         font pango:Droid Sans Mono 7
         tray_output none
 }
 
 #                       BORDER      BACKGROUND  TEXT        INDICATOR
-client.focused          $lime       $lime       $white      $lime
-client.unfocused        $darkgray   $darklime   $white      $darklime
-client.focused_inactive $darkgray   $darklime   $white      $darklime
-client.urgent           $urgentred  $urgentred  $white      $urgentred
+client.focused          #FCF5C7     #FCF5C7     #FCF5C7     #FCF5C7
+client.unfocused        #20293A     #20293A     #566E9C     #566E9C
+client.focused_inactive #FCF5C7     #FCF5C7     #FCF5C7     #FCF5C7
+client.urgent           #B33A3A     #B33A3A     #FCF5C7     #B33A3A
 
 workspace_auto_back_and_forth yes
 force_display_urgency_hint 0 ms
 
 # Gaps requirement
 
-new_window pixel 1
-new_float pixel 1
+new_window pixel 5
+new_float pixel 5
+
 smart_gaps on
 smart_borders on
 
