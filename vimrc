@@ -42,7 +42,7 @@ set viewoptions=cursor,folds,slash,unix
 
 set t_Co=256
 
-colors sierra
+colors colorsbox-material
 
 set tabstop=4
 set shiftwidth=4
@@ -62,7 +62,7 @@ set visualbell
 set ttyfast
 set ruler
 set cursorline
-hi CursorLine cterm=bold ctermbg=234 
+hi CursorLine cterm=bold ctermbg=234
 set backspace=indent,eol,start
 set laststatus=2
 set number

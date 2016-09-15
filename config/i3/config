@@ -107,11 +107,10 @@ bindsym $mod+Shift+r restart
 mode "RESIZE" {
         # These bindings trigger as soon as you enter the resize mode
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 5 px or 5 ppt
-        bindsym Down resize grow height 5 px or 5 ppt
-        bindsym Up resize shrink height 5 px or 5 ppt
-        bindsym Right resize grow width 5 px or 5 ppt
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -161,15 +160,15 @@ bindsym $mod+l exec i3lock-fancy -p
 bar {
         i3bar_command i3bar -t
         colors {
-            background  #20293A
+            background  #202020
             statusline  #FCF5C7
-            separator   #566E9C
+            separator   #505050
 
 #                               BORDER      BACKGROUND  TEXT
-            focused_workspace   #20293A     #FCF5C7     #20293A
-            active_workspace    #FCF5C7     #20293A     #FCF5C7
-            inactive_workspace  #20293A     #20293A     #A0A0A0
-            urgent_workspace    #20293A     #20293A     #FCF5C7
+            focused_workspace   #202020     #FCF5C7     #202020
+            active_workspace    #FCF5C7     #202020     #FCF5C7
+            inactive_workspace  #202020     #202020     #A0A0A0
+            urgent_workspace    #202020     #202020     #FCF5C7
         }
 
         position top
@@ -181,7 +180,7 @@ bar {
 
 #                       BORDER      BACKGROUND  TEXT        INDICATOR
 client.focused          #FCF5C7     #FCF5C7     #FCF5C7     #FCF5C7
-client.unfocused        #20293A     #20293A     #566E9C     #566E9C
+client.unfocused        #202020     #202020     #566E9C     #566E9C
 client.focused_inactive #FCF5C7     #FCF5C7     #FCF5C7     #FCF5C7
 client.urgent           #B33A3A     #B33A3A     #FCF5C7     #B33A3A
 
@@ -190,11 +189,8 @@ force_display_urgency_hint 0 ms
 
 # Gaps requirement
 
-new_window pixel 5
-new_float pixel 5
-
-smart_gaps on
-smart_borders on
+new_window pixel 2
+new_float pixel 2
 
 # Styling
 gaps inner 15
