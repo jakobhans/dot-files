@@ -27,7 +27,7 @@ URxvt.boldFont: xft:Consolas-10
 URxvt.letterSpace: -1
 
 URxvt.depth: 32
-URxvt.background: [90]#202020
+URxvt.background: [93]#202020
 URxvt.foreground: #FCF5C7
 URxvt.color0:     #2E3436
 URxvt.color1:     #FF7777

@@ -105,8 +105,7 @@ bindsym $mod+Shift+r restart
 
 # resize window (you can also use the mouse for that)
 mode "RESIZE" {
-        # These bindings trigger as soon as you enter the resize mode
-
+        
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
@@ -160,15 +159,15 @@ bindsym $mod+l exec i3lock-fancy -p
 bar {
         i3bar_command i3bar -t
         colors {
-            background  #202020
+            background  #202020AA
             statusline  #FCF5C7
             separator   #505050
 
 #                               BORDER      BACKGROUND  TEXT
-            focused_workspace   #202020     #FCF5C7     #202020
-            active_workspace    #FCF5C7     #202020     #FCF5C7
-            inactive_workspace  #202020     #202020     #A0A0A0
-            urgent_workspace    #202020     #202020     #FCF5C7
+            focused_workspace   #202020AA   #FCF5C7AA   #202020
+            active_workspace    #FCF5C7AA   #202020AA   #FCF5C7
+            inactive_workspace  #202020AA   #202020AA   #AAAAAA
+            urgent_workspace    #202020AA   #202020AA   #FCF5C7
         }
 
         position top
@@ -179,9 +178,9 @@ bar {
 }
 
 #                       BORDER      BACKGROUND  TEXT        INDICATOR
-client.focused          #FCF5C7     #FCF5C7     #FCF5C7     #FCF5C7
-client.unfocused        #202020     #202020     #566E9C     #566E9C
-client.focused_inactive #FCF5C7     #FCF5C7     #FCF5C7     #FCF5C7
+client.focused          #FCF5C7     #FCF5C7     #202020     #FCF5C7
+client.unfocused        #202020     #202020     #FCF5C7     #202020
+client.focused_inactive #FCF5C7     #FCF5C7     #202020     #FCF5C7
 client.urgent           #B33A3A     #B33A3A     #FCF5C7     #B33A3A
 
 workspace_auto_back_and_forth yes
