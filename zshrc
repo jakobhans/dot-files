@@ -115,4 +115,7 @@ zstyle ':completion:*' group-name ''
 
 zstyle ':completion:*' auto-description 'specify: %d'
 
-[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && startx
+# Automatically start x session and then logout when done
+if [ "$(tty)" = "/dev/tty1" ]; then
+    startx && exit
+fi

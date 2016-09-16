@@ -161,7 +161,7 @@ bar {
         colors {
             background  #202020AA
             statusline  #FCF5C7
-            separator   #505050
+            separator   #202020
 
 #                               BORDER      BACKGROUND  TEXT
             focused_workspace   #202020AA   #FCF5C7AA   #202020
