@@ -1,10 +1,10 @@
 ! Rofi
 rofi.opacity: 95
 rofi.color-enabled: true
-rofi.color-window: #202020, #202020, #fcf5c7
-rofi.color-normal: #202020, #fcf5c7, #202020, #fcf5c7, #202020
-rofi.color-active: #202020, #007acc, #202020, #007acc, #202020
-rofi.color-urgent: #202020, #ff7777, #202020, #ff7777, #202020
+rofi.color-window: #282828, #282828, #EBDBB2
+rofi.color-normal: #282828, #EBDBB2, #282828, #EBDBB2, #282828
+rofi.color-active: #282828, #458588, #282828, #458588, #282828
+rofi.color-urgent: #282828, #FB4934, #282828, #FB4934, #282828
 
 ! Fonts config
 Xft.dpi: 142
@@ -27,24 +27,24 @@ URxvt.boldFont: xft:Consolas-10
 URxvt.letterSpace: -1
 
 URxvt.depth: 32
-URxvt.background: [93]#202020
-URxvt.foreground: #FCF5C7
-URxvt.color0:     #2E3436
-URxvt.color1:     #FF7777
-URxvt.color2:     #E6B800
-URxvt.color3:     #99FF99
-URxvt.color4:     #6699FF
-URxvt.color5:     #CC3399
-URxvt.color6:     #0099ff
-URxvt.color7:     #FFFFFF
-URxvt.color8:     #555753
-URxvt.color9:     #EF2929
-URxvt.color10:    #8AE234
-URxvt.color11:    #FCE94F
-URxvt.color12:    #729FCF
-URxvt.color13:    #AD7FA8
-URxvt.color14:    #34E2E2
-URxvt.color15:    #EEEEEC
+URxvt.background: [93]#282828
+URxvt.foreground: #EBDBB2
+URxvt.color0:     #282828
+URxvt.color1:     #CC241D
+URxvt.color2:     #98971A
+URxvt.color3:     #D79921
+URxvt.color4:     #458588
+URxvt.color5:     #B16286
+URxvt.color6:     #689D6A
+URxvt.color7:     #A89984
+URxvt.color8:     #928374
+URxvt.color9:     #FB4934
+URxvt.color10:    #B8BB26
+URxvt.color11:    #FABD2F
+URxvt.color12:    #83A598
+URxvt.color13:    #D3869B
+URxvt.color14:    #8EC07C
+URxvt.color15:    #EBDBB2
 
 URxvt.fading:     20
 

@@ -2,14 +2,6 @@
 
 set $mod Mod4
 
-set $blue       #131D24
-set $lightblue  #232D34
-set $lightgray  #DDDDDD
-set $gray       #A0A0A0
-set $darkgray   #444444
-set $white      #FFFFFF
-set $urgentred  #B33A3A
-
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango: Consolas 9
@@ -159,15 +151,15 @@ bindsym $mod+l exec i3lock-fancy -p
 bar {
         i3bar_command i3bar -t
         colors {
-            background  #202020AA
-            statusline  #FCF5C7
-            separator   #202020
+            background  #282828BB
+            statusline  #EBDBB2
+            separator   #928374
 
 #                               BORDER      BACKGROUND  TEXT
-            focused_workspace   #202020AA   #FCF5C7AA   #202020
-            active_workspace    #FCF5C7AA   #202020AA   #FCF5C7
-            inactive_workspace  #202020AA   #202020AA   #AAAAAA
-            urgent_workspace    #202020AA   #202020AA   #FCF5C7
+            focused_workspace   #282828AA   #EBDBB2AA   #282828
+            active_workspace    #EBDBB2AA   #282828AA   #EBDBB2
+            inactive_workspace  #282828AA   #282828AA   #A89984
+            urgent_workspace    #282828AA   #282828AA   #EBDBB2
         }
 
         position top
@@ -178,10 +170,10 @@ bar {
 }
 
 #                       BORDER      BACKGROUND  TEXT        INDICATOR
-client.focused          #FCF5C7     #FCF5C7     #202020     #FCF5C7
-client.unfocused        #202020     #202020     #FCF5C7     #202020
-client.focused_inactive #FCF5C7     #FCF5C7     #202020     #FCF5C7
-client.urgent           #B33A3A     #B33A3A     #FCF5C7     #B33A3A
+client.focused          #EBDBB2     #EBDBB2     #282828     #EBDBB2
+client.unfocused        #282828     #282828     #EBDBB2     #282828
+client.focused_inactive #282828     #282828     #EBDBB2     #282828
+client.urgent           #FB4934     #FB4934     #EBDBB2     #FB4934
 
 workspace_auto_back_and_forth yes
 force_display_urgency_hint 0 ms

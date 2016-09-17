@@ -1,12 +1,3 @@
-set backspace=indent,eo,start
-set autoindent
-set backup             " keep a backup file (restore to previous version)
-set history=50
-set undofile           " keep an undo file (undo changes after closing)
-set ruler              " show the cursor position all the time
-set showcmd            " display incomplete commands
-set incsearch
-
 " Don't use Ex mode, use Q for formatting
 noremap Q gq
 
@@ -47,6 +38,95 @@ if !exists(":DiffOrig")
                  \ | wincmd p | diffthis
 endif
 
-" Custom stuff
+" vim-plug section
+call plug#begin('~/.config/neovim/autload/plug.vim')
 
-packadd vimball
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'pbogut/deoplete-padawan'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'morhetz/gruvbox'
+Plug 'noahfrederick/vim-composer'
+Plug 'vim-utils/vim-man'
+Plug 'FelikZ/ctrlp-py-matcher'
+
+call plug#end()
+
+" color theme
+colorscheme gruvbox
+set background=dark
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
+
+" deoplete-padawan
+let g:deoplete#sources#padawan#add_parentheses = 1
+
+
+" CtrlP
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+
+" restore_view settings
+set viewoptions=cursor,folds,slash,unix
+
+" Misc
+set backup
+set undofile
+
+syntax on
+set t_Co=256
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set smartindent
+set autoindent
+set history=50
+
+set scrolloff=3
+set hidden
+set ruler
+set cursorline
+hi CursorLine cterm=bold ctermbg=234
+hi Normal ctermbg=none
+set backspace=indent,eol,start
+set laststatus=2
+set number
+set relativenumber
+set showcmd
+
+" statusline stuff
+set statusline=%t                                   "tail of the filename
+set statusline+=[%{strlen(&fenc)?&fenc:'none'},     "file encoding
+set statusline+=%{&ff}]                             "file format
+set statusline+=%h                                  "help file flag
+set statusline+=%m                                  "modified flag
+set statusline+=%r                                  "read only flag
+set statusline+=%y                                  "filetype
+set statusline+=%=                                  "left/right separator
+set statusline+=%c,                                 "cursor column
+set statusline+=%l/%L                               "cursor line/total lines
+set statusline+=\ %P                                "percent through file
+
+let mapleader = ","
+let g:mapleader = ","
+
+nnoremap / /\v
+vnoremap / /\v
+set nohlsearch
+set ignorecase
+set smartcase
+set gdefault
+set incsearch
+set showmatch
+nnoremap <leader><space> :no<cr>
+nnoremap <tab> %
+
+set wrap
+set textwidth=79
+set formatoptions=qrn1
+
+au FocusLost * :wa
+
+au BufRead,BufNewFile *.blade.php set filetype=html

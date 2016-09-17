@@ -98,11 +98,12 @@ alias ls='pwd; ls -a --color'
 alias lsl='pwd; ls -lahG --color | more'
 alias g='git'
 alias startx='ssh-agent startx'
-alias chromium-browser='chromium --force-device-scale-factor=1.25'
+alias vi='vim'
+alias vim='nvim'
 
 #Description after some actions
 for c in cp rm chmod chown rename; do
-    alias $c="$c -v"
+    alias $c="pwd; $c -v"
 done
 
 # Completion stuff
