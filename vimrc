@@ -42,7 +42,6 @@ set viewoptions=cursor,folds,slash,unix
 
 set t_Co=256
 
-colors colorsbox-material
 
 set tabstop=4
 set shiftwidth=4

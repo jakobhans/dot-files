@@ -98,8 +98,7 @@ alias ls='pwd; ls -a --color'
 alias lsl='pwd; ls -lahG --color | more'
 alias g='git'
 alias startx='ssh-agent startx'
-alias vi='vim'
-alias vim='nvim'
+alias vi='nvim'
 
 #Description after some actions
 for c in cp rm chmod chown rename; do

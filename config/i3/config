@@ -4,7 +4,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango: Consolas 9
+font pango: Consolas 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -156,7 +156,7 @@ bar {
             separator   #928374
 
 #                               BORDER      BACKGROUND  TEXT
-            focused_workspace   #282828AA   #EBDBB2AA   #282828
+            focused_workspace   #EBDBB2AA   #EBDBB2AA   #282828
             active_workspace    #EBDBB2AA   #282828AA   #EBDBB2
             inactive_workspace  #282828AA   #282828AA   #A89984
             urgent_workspace    #282828AA   #282828AA   #EBDBB2
