@@ -57,10 +57,10 @@ set background=dark
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_ignore_case = 1
 
 " deoplete-padawan
 let g:deoplete#sources#padawan#add_parentheses = 1
-
 
 " CtrlP
 let g:ctrlp_show_hidden = 1
