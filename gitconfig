@@ -17,6 +17,6 @@
 	email = jakobhans@gmail.com
 [core]
 	excludesfile = /home/jakobhans/.gitignore_global
-    editor = vim
+    editor = vi
 [push]
 	default = simple

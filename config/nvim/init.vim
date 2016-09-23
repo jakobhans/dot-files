@@ -72,6 +72,7 @@ set viewoptions=cursor,folds,slash,unix
 " Misc
 set backup
 set undofile
+set mouse-=a
 
 syntax on
 set t_Co=256
@@ -122,9 +123,21 @@ set incsearch
 set showmatch
 nnoremap <leader><space> :no<cr>
 nnoremap <tab> %
+nnoremap j gj
+nnoremap k gk
+
+" Remove arrows
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
 
 set wrap
-set textwidth=79
 set formatoptions=qrn1
 
 au FocusLost * :wa
