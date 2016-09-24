@@ -1,4 +1,3 @@
-" Don't use Ex mode, use Q for formatting
 noremap Q gq
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
@@ -6,7 +5,6 @@ noremap Q gq
 inoremap <C-U> <C-G>u<C-U>
 
 " Switch syntax highlighting on
-syntax on
 
 " Enable file type detection.
 " Use the default filetype settings, so that mail gets 'textwidth' set to 72,
@@ -52,12 +50,18 @@ Plug 'FelikZ/ctrlp-py-matcher'
 call plug#end()
 
 " color theme
+syntax on
 colorscheme gruvbox
 set background=dark
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_number_columnt = 'bg4'
+let g:gruvbox_improved_warnings = 1
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_ignore_case = 1
+" Use tab to complete
+inoremap <expr><tab> pumvisible() ? "<c-n>" : "\<tab>"
 
 " deoplete-padawan
 let g:deoplete#sources#padawan#add_parentheses = 1
