@@ -156,8 +156,8 @@ bar {
             separator   #928374
 
 #                               BORDER      BACKGROUND  TEXT
-            focused_workspace   #EBDBB2AA   #EBDBB2AA   #282828
-            active_workspace    #EBDBB2AA   #282828AA   #EBDBB2
+            focused_workspace   #EBDBB2     #EBDBB2     #282828
+            active_workspace    #EBDBB2     #282828AA   #EBDBB2
             inactive_workspace  #282828AA   #282828AA   #A89984
             urgent_workspace    #282828AA   #282828AA   #EBDBB2
         }
