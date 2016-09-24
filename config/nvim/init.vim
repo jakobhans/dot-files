@@ -40,7 +40,6 @@ endif
 call plug#begin('~/.config/neovim/autload/plug.vim')
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'pbogut/deoplete-padawan'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'morhetz/gruvbox'
 Plug 'noahfrederick/vim-composer'
