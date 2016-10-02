@@ -49,9 +49,11 @@ Plug 'FelikZ/ctrlp-py-matcher'
 call plug#end()
 
 " color theme
-syntax on
-colorscheme gruvbox
+syntax on       " enable syntax processing
+set cursorline
 set background=dark
+hi CursorLine cterm=bold ctermbg=234
+colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_number_columnt = 'bg4'
 let g:gruvbox_improved_warnings = 1
@@ -66,6 +68,7 @@ inoremap <expr><tab> pumvisible() ? "<c-n>" : "\<tab>"
 let g:deoplete#sources#padawan#add_parentheses = 1
 
 " CtrlP
+let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
@@ -80,25 +83,33 @@ set mouse-=a
 syntax on
 set t_Co=256
 
+set formatoptions=qrn1
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
 set smartindent
 set autoindent
+set wrap
 set history=50
 
 set scrolloff=3
 set hidden
 set ruler
-set cursorline
-hi CursorLine cterm=bold ctermbg=234
-hi Normal ctermbg=none
 set backspace=indent,eol,start
 set laststatus=2
 set number
 set relativenumber
 set showcmd
+set wildmenu
+set lazyredraw
+set showmatch
+
+set foldenable
+set foldlevelstart=10
+set foldnestmax=10
+nnoremap <space> za
+set foldmethod=indent
 
 " statusline stuff
 set statusline=%t                                   "tail of the filename
@@ -118,13 +129,12 @@ let g:mapleader = ","
 
 nnoremap / /\v
 vnoremap / /\v
-set nohlsearch
+set hlsearch
+nnoremap <leader><space> :nohlsearch<CR>
 set ignorecase
 set smartcase
 set gdefault
 set incsearch
-set showmatch
-nnoremap <leader><space> :no<cr>
 nnoremap <tab> %
 nnoremap j gj
 nnoremap k gk
@@ -138,10 +148,6 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
-
-
-set wrap
-set formatoptions=qrn1
 
 au FocusLost * :wa
 
