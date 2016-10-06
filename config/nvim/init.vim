@@ -70,7 +70,7 @@ let g:deoplete#sources#padawan#add_parentheses = 1
 " CtrlP
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_show_hidden = 1
-let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+"let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
 " restore_view settings
 set viewoptions=cursor,folds,slash,unix
@@ -112,7 +112,7 @@ nnoremap <space> za
 set foldmethod=indent
 
 " statusline stuff
-set statusline=%t                                   "tail of the filename
+set statusline=%f                                   "tail of the filename
 set statusline+=[%{strlen(&fenc)?&fenc:'none'},     "file encoding
 set statusline+=%{&ff}]                             "file format
 set statusline+=%h                                  "help file flag
