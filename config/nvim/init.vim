@@ -77,6 +77,7 @@ set viewoptions=cursor,folds,slash,unix
 
 " Misc
 set backup
+set backupdir=~/.vim/backup
 set undofile
 set mouse-=a
 
