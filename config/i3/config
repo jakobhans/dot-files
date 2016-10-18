@@ -157,9 +157,9 @@ bar {
 
 #                               BORDER      BACKGROUND  TEXT
             focused_workspace   #EBDBB2     #EBDBB2     #282828
-            active_workspace    #EBDBB2     #282828AA   #EBDBB2
-            inactive_workspace  #282828AA   #282828AA   #A89984
-            urgent_workspace    #282828AA   #282828AA   #EBDBB2
+            active_workspace    #EBDBB2     #282828BB   #EBDBB2
+            inactive_workspace  #282828BB   #282828BB   #A89984
+            urgent_workspace    #282828BB   #282828BB   #EBDBB2
         }
 
         position top
