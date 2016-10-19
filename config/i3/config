@@ -98,17 +98,25 @@ bindsym $mod+Shift+r restart
 # resize window (you can also use the mouse for that)
 mode "RESIZE" {
         
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+    bindsym Left resize shrink width 5 px or 5 ppt
+    bindsym Down resize grow height 5 px or 5 ppt
+    bindsym Up resize shrink height 5 px or 5 ppt
+    bindsym Right resize grow width 5 px or 5 ppt
 
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
-
 bindsym $mod+r mode "RESIZE"
+
+mode "KEYBOARD LAYOUT - (S)panish / (E)nglish" {
+    bindsym $mod+s exec setxkbmap es
+    bindsym $mod+e exec setxkbmap us
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Shift+k mode "KEYBOARD LAYOUT - (S)panish / (E)nglish"
+
 
 mode "Exit (L)ogout, (R)eboot, (S)hutdown" {
     bindsym $mod+r exec systemctl reboot
@@ -118,7 +126,6 @@ mode "Exit (L)ogout, (R)eboot, (S)hutdown" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-
 bindsym $mod+Shift+e mode "Exit (L)ogout, (R)eboot, (S)hutdown"
 
 # Custom stuff
@@ -149,24 +156,24 @@ bindsym $mod+l exec i3lock-fancy -p
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        i3bar_command i3bar -t
-        colors {
-            background  #282828BB
-            statusline  #EBDBB2
-            separator   #928374
+    i3bar_command i3bar -t
+    colors {
+        background  #282828BB
+        statusline  #EBDBB2
+        separator   #928374
 
-#                               BORDER      BACKGROUND  TEXT
-            focused_workspace   #EBDBB2     #EBDBB2     #282828
-            active_workspace    #EBDBB2     #282828BB   #EBDBB2
-            inactive_workspace  #282828BB   #282828BB   #A89984
-            urgent_workspace    #282828BB   #282828BB   #EBDBB2
-        }
+#                           BORDER      BACKGROUND  TEXT
+        focused_workspace   #EBDBB2     #EBDBB2     #282828
+        active_workspace    #EBDBB2     #282828BB   #EBDBB2
+        inactive_workspace  #282828BB   #282828BB   #A89984
+        urgent_workspace    #282828BB   #282828BB   #EBDBB2
+    }
 
-        position top
-        height 27
-        status_command py3status -c ~/.config/i3/i3status.conf
-        font pango:Droid Sans Mono 8
-        tray_output none
+    position top
+    height 27
+    status_command py3status -c ~/.config/i3/i3status.conf
+    font pango:Droid Sans Mono 8
+    tray_output none
 }
 
 #                       BORDER      BACKGROUND  TEXT        INDICATOR
