@@ -16,7 +16,7 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec rofi -show run -eh 2
+bindsym $mod+d exec rofi -show run -eh 2 -fullscreen -sidebar-mode
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left

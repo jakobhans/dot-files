@@ -1,4 +1,5 @@
 ! Rofi
+rofi.padding: 350
 rofi.opacity: 95
 rofi.color-enabled: true
 rofi.color-window: #282828, #282828, #EBDBB2
