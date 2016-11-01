@@ -45,6 +45,7 @@ Plug 'morhetz/gruvbox'
 Plug 'noahfrederick/vim-composer'
 Plug 'vim-utils/vim-man'
 Plug 'FelikZ/ctrlp-py-matcher'
+Plug 'stephpy/vim-php-cs-fixer'
 
 call plug#end()
 

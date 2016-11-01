@@ -58,7 +58,7 @@ plugins=(git tmux)
 
 # User configuration
 export GOPATH=$HOME/.gopath
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.local/bin:$HOME/.npm-global/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.local/bin:$HOME/.npm-global/bin:$HOME/.config/composer/vendor/bin:$PATH
 export PATH=/usr/local/go/bin:$GOPATH/bin:$PATH
 
 # export MANPATH="/usr/local/man:$MANPATH"
