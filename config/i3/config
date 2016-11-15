@@ -108,17 +108,17 @@ mode "RESIZE" {
 }
 bindsym $mod+r mode "RESIZE"
 
-mode "KEYBOARD LAYOUT - (S)panish / (E)nglish" {
+mode "Keyboard Layout - (S)panish / (E)nglish" {
     bindsym $mod+s exec setxkbmap es
     bindsym $mod+e exec setxkbmap us
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+Shift+k mode "KEYBOARD LAYOUT - (S)panish / (E)nglish"
+bindsym $mod+Shift+k mode "Keyboard Layout - (S)panish / (E)nglish"
 
 
-mode "Exit (L)ogout, (R)eboot, (S)hutdown" {
+mode "Exit - (L)ogout, (R)eboot, (S)hutdown" {
     bindsym $mod+r exec systemctl reboot
     bindsym $mod+l exit
     bindsym $mod+s exec systemctl poweroff
@@ -126,7 +126,7 @@ mode "Exit (L)ogout, (R)eboot, (S)hutdown" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+Shift+e mode "Exit (L)ogout, (R)eboot, (S)hutdown"
+bindsym $mod+Shift+e mode "Exit - (L)ogout, (R)eboot, (S)hutdown"
 
 # Custom stuff
 exec_always compton -f --config /home/jakobhans/.config/compton.conf
