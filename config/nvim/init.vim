@@ -156,3 +156,4 @@ inoremap <right> <nop>
 au FocusLost * :wa
 
 au BufRead,BufNewFile *.blade.php set filetype=html
+au BufRead,BufNewFile filetype php set filetype=php.html
