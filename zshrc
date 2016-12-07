@@ -100,6 +100,8 @@ alias lsl='pwd; ls -lahG --color | more'
 alias g='git'
 alias startx='ssh-agent startx'
 alias vi='nvim'
+alias homestead='cd ~/Homestead && vagrant up & cd ~/'
+alias ht='htop --sort-key=PERCENT_CPU'
 
 #Description after some actions
 for c in cp rm chmod chown rename; do
