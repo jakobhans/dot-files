@@ -15,7 +15,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'morhetz/gruvbox'
 Plug 'noahfrederick/vim-composer'
 Plug 'vim-utils/vim-man'
-Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'StanAngeloff/php.vim'
 Plug 'vim-scripts/L9'
@@ -76,7 +75,6 @@ set completeopt=longest,menuone
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
 " statusline display 
 set statusline=%f                                   "tail of the filename

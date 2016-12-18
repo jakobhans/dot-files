@@ -11,36 +11,107 @@
 # hlsearch on (H) or off (h):
 ~h
 # Command Line History (newest to oldest):
-:q
-|2,0,1482068214,,"q"
+:wq
+|2,0,1482068431,,"wq"
 :w
-|2,0,1482068213,,"w"
+|2,0,1482068419,,"w"
+:q
+|2,0,1482068371,,"q"
+:PlugUpdate
+|2,0,1482068364,,"PlugUpdate"
+:PlugClean
+|2,0,1482068349,,"PlugClean"
 
 # Search String History (newest to oldest):
 
 # Expression History (newest to oldest):
 
 # Input Line History (newest to oldest):
+@y
+|2,3,1482068355,,"y"
 
 # Debug Line History (newest to oldest):
 
 # Registers:
+""1	LINE	0
+	let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+|3,1,1,1,1,0,1482068338,"let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }"
+"2	LINE	0
+	Plug 'FelikZ/ctrlp-py-matcher'
+|3,0,2,1,1,0,1482068327,"Plug 'FelikZ/ctrlp-py-matcher'"
 
 # File marks:
-'0  13  12  ~/dot-files/.gitignore
-|4,48,13,12,1482068214,"~/dot-files/.gitignore"
+'0  13  24  ~/dot-files/.gitignore
+|4,48,13,24,1482068431,"~/dot-files/.gitignore"
+'1  78  0  ~/dot-files/vimrc
+|4,49,78,0,1482068340,"~/dot-files/vimrc"
+'2  15  12  ~/dot-files/.gitignore
+|4,50,15,12,1482068214,"~/dot-files/.gitignore"
+'3  13  12  ~/dot-files/.gitignore
+|4,51,13,12,1482068214,"~/dot-files/.gitignore"
 
 # Jumplist (newest first):
+-'  13  24  ~/dot-files/.gitignore
+|4,39,13,24,1482068431,"~/dot-files/.gitignore"
+-'  1  0  ~/dot-files/.gitignore
+|4,39,1,0,1482068390,"~/dot-files/.gitignore"
+-'  78  0  ~/dot-files/vimrc
+|4,39,78,0,1482068340,"~/dot-files/vimrc"
+-'  78  0  ~/dot-files/vimrc
+|4,39,78,0,1482068340,"~/dot-files/vimrc"
+-'  78  0  ~/dot-files/vimrc
+|4,39,78,0,1482068340,"~/dot-files/vimrc"
+-'  78  0  ~/dot-files/vimrc
+|4,39,78,0,1482068340,"~/dot-files/vimrc"
+-'  1  0  ~/dot-files/vimrc
+|4,39,1,0,1482068322,"~/dot-files/vimrc"
+-'  1  0  ~/dot-files/vimrc
+|4,39,1,0,1482068322,"~/dot-files/vimrc"
+-'  1  0  ~/dot-files/vimrc
+|4,39,1,0,1482068322,"~/dot-files/vimrc"
+-'  1  0  ~/dot-files/vimrc
+|4,39,1,0,1482068322,"~/dot-files/vimrc"
+-'  15  12  ~/dot-files/.gitignore
+|4,39,15,12,1482068214,"~/dot-files/.gitignore"
 -'  13  12  ~/dot-files/.gitignore
 |4,39,13,12,1482068214,"~/dot-files/.gitignore"
+-'  13  12  ~/dot-files/.gitignore
+|4,39,13,12,1482068214,"~/dot-files/.gitignore"
+-'  13  12  ~/dot-files/.gitignore
+|4,39,13,12,1482068214,"~/dot-files/.gitignore"
+-'  13  12  ~/dot-files/.gitignore
+|4,39,13,12,1482068214,"~/dot-files/.gitignore"
+-'  1  0  ~/dot-files/.gitignore
+|4,39,1,0,1482068203,"~/dot-files/.gitignore"
+-'  1  0  ~/dot-files/.gitignore
+|4,39,1,0,1482068203,"~/dot-files/.gitignore"
+-'  1  0  ~/dot-files/.gitignore
+|4,39,1,0,1482068203,"~/dot-files/.gitignore"
 -'  1  0  ~/dot-files/.gitignore
 |4,39,1,0,1482068203,"~/dot-files/.gitignore"
 
 # History of marks within files (newest to oldest):
 
 > ~/dot-files/.gitignore
-	*	1482068213	0
-	"	13	12
-	^	13	13
-	.	13	12
-	+	13	12
+	*	1482068429	0
+	"	13	24
+	^	13	25
+	.	13	24
+	+	15	12
+	+	16	8
+	+	19	0
+	+	13	24
+
+> ~/dot-files/vimrc
+	*	1482068338	0
+	"	78	0
+	.	78	0
+	+	18	0
+	+	78	0
+
+> ~/dot-files/vim/autoload/ControlP
+	*	1482068322	0
+	"	1	0
+	.	2	0
+	+	1	0
+	+	2	0
