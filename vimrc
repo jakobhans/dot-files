@@ -91,10 +91,38 @@ set statusline+=%c,                                 "cursor column
 set statusline+=%l/%L                               "cursor line/total lines
 set statusline+=\ %P                                "percent through file
 
-" Misc
+" Backup 
+if isdirectory($HOME . '/.vim/backup') == 0
+    :silent !mkdir -p ~/.vim/backup >/dev/null 2>&1
+endif
+set backupdir-=.
+set backupdir+=.
+set backupdir-=~/
+set backupdir^=~/.vim/backup/
+set backupdir^=./.vim-backup/
 set backup
-set backupdir=~/.vim/backup
-set undofile
+
+" Swap Files
+if isdirectory($HOME . '/.vim/swap') == 0
+    :silent !mkdir -p ~/.vim/swap >/dev/null 2>&1
+endif
+set directory=./.vim-swap//
+set directory+=~/.vim/swap//
+set directory+=~/tmp//
+set directory+=.
+
+" Undo Files
+if exists("+undofile")
+    if isdirectory($HOME . '/.vim/undo') == 0
+        :silent !mkdir -p ~/.vim/undo > /dev/null 2>&1
+    endif
+    set undodir=./.vim-undo//
+    set undodir+=~/.vim/undo//
+    set undofile
+endif
+
+" Misc
+set viminfo+=n~/.vim/viminfo
 set mouse-=a
 
 " Colors
