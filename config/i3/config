@@ -1,5 +1,3 @@
-# vim:filetype=i3
-
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -193,3 +191,5 @@ new_float pixel 2
 # Styling
 gaps inner 15
 gaps outer 20
+
+# vim:filetype=i3
