@@ -9,8 +9,8 @@ Session.vim
 *~
 # auto-generated tag files
 tags
-
 vim/view/
+vim/autoload
 
 # lftp log and history files
 lftp/cwd_history
