@@ -11,12 +11,12 @@
 # hlsearch on (H) or off (h):
 ~h
 # Command Line History (newest to oldest):
+:q
+|2,0,1482077008,,"q"
+:w
+|2,0,1482077007,,"w"
 :wq
 |2,0,1482068431,,"wq"
-:w
-|2,0,1482068419,,"w"
-:q
-|2,0,1482068371,,"q"
 :PlugUpdate
 |2,0,1482068364,,"PlugUpdate"
 :PlugClean
@@ -33,26 +33,53 @@
 # Debug Line History (newest to oldest):
 
 # Registers:
-""1	LINE	0
+""0	LINE	0
 	let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-|3,1,1,1,1,0,1482068338,"let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }"
+|3,1,0,1,1,0,1482073031,"let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }"
+"1	LINE	0
+	let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+|3,0,1,1,1,0,1482068338,"let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }"
 "2	LINE	0
 	Plug 'FelikZ/ctrlp-py-matcher'
 |3,0,2,1,1,0,1482068327,"Plug 'FelikZ/ctrlp-py-matcher'"
 
 # File marks:
-'0  13  24  ~/dot-files/.gitignore
-|4,48,13,24,1482068431,"~/dot-files/.gitignore"
-'1  78  0  ~/dot-files/vimrc
-|4,49,78,0,1482068340,"~/dot-files/vimrc"
-'2  15  12  ~/dot-files/.gitignore
-|4,50,15,12,1482068214,"~/dot-files/.gitignore"
-'3  13  12  ~/dot-files/.gitignore
-|4,51,13,12,1482068214,"~/dot-files/.gitignore"
+'0  17  7  ~/dot-files/.gitignore
+|4,48,17,7,1482077008,"~/dot-files/.gitignore"
+'1  1  0  ~/dot-files/config/i3/i3status.conf
+|4,49,1,0,1482076976,"~/dot-files/config/i3/i3status.conf"
+'2  13  24  ~/dot-files/.gitignore
+|4,50,13,24,1482068431,"~/dot-files/.gitignore"
+'3  13  24  ~/dot-files/.gitignore
+|4,51,13,24,1482068431,"~/dot-files/.gitignore"
+'4  78  0  ~/dot-files/vimrc
+|4,52,78,0,1482068340,"~/dot-files/vimrc"
+'5  15  12  ~/dot-files/.gitignore
+|4,53,15,12,1482068214,"~/dot-files/.gitignore"
+'6  13  12  ~/dot-files/.gitignore
+|4,54,13,12,1482068214,"~/dot-files/.gitignore"
+'7  15  12  ~/dot-files/.gitignore
+|4,55,15,12,1482068214,"~/dot-files/.gitignore"
+'8  13  12  ~/dot-files/.gitignore
+|4,56,13,12,1482068214,"~/dot-files/.gitignore"
 
 # Jumplist (newest first):
+-'  17  7  ~/dot-files/.gitignore
+|4,39,17,7,1482077008,"~/dot-files/.gitignore"
+-'  1  0  ~/dot-files/.gitignore
+|4,39,1,0,1482076993,"~/dot-files/.gitignore"
+-'  1  0  ~/dot-files/config/i3/i3status.conf
+|4,39,1,0,1482076976,"~/dot-files/config/i3/i3status.conf"
+-'  1  0  ~/dot-files/config/i3/i3status.conf
+|4,39,1,0,1482076976,"~/dot-files/config/i3/i3status.conf"
 -'  13  24  ~/dot-files/.gitignore
 |4,39,13,24,1482068431,"~/dot-files/.gitignore"
+-'  13  24  ~/dot-files/.gitignore
+|4,39,13,24,1482068431,"~/dot-files/.gitignore"
+-'  13  24  ~/dot-files/.gitignore
+|4,39,13,24,1482068431,"~/dot-files/.gitignore"
+-'  1  0  ~/dot-files/.gitignore
+|4,39,1,0,1482068390,"~/dot-files/.gitignore"
 -'  1  0  ~/dot-files/.gitignore
 |4,39,1,0,1482068390,"~/dot-files/.gitignore"
 -'  78  0  ~/dot-files/vimrc
@@ -63,6 +90,30 @@
 |4,39,78,0,1482068340,"~/dot-files/vimrc"
 -'  78  0  ~/dot-files/vimrc
 |4,39,78,0,1482068340,"~/dot-files/vimrc"
+-'  78  0  ~/dot-files/vimrc
+|4,39,78,0,1482068340,"~/dot-files/vimrc"
+-'  78  0  ~/dot-files/vimrc
+|4,39,78,0,1482068340,"~/dot-files/vimrc"
+-'  78  0  ~/dot-files/vimrc
+|4,39,78,0,1482068340,"~/dot-files/vimrc"
+-'  78  0  ~/dot-files/vimrc
+|4,39,78,0,1482068340,"~/dot-files/vimrc"
+-'  78  0  ~/dot-files/vimrc
+|4,39,78,0,1482068340,"~/dot-files/vimrc"
+-'  78  0  ~/dot-files/vimrc
+|4,39,78,0,1482068340,"~/dot-files/vimrc"
+-'  78  0  ~/dot-files/vimrc
+|4,39,78,0,1482068340,"~/dot-files/vimrc"
+-'  78  0  ~/dot-files/vimrc
+|4,39,78,0,1482068340,"~/dot-files/vimrc"
+-'  78  0  ~/dot-files/vimrc
+|4,39,78,0,1482068340,"~/dot-files/vimrc"
+-'  78  0  ~/dot-files/vimrc
+|4,39,78,0,1482068340,"~/dot-files/vimrc"
+-'  78  0  ~/dot-files/vimrc
+|4,39,78,0,1482068340,"~/dot-files/vimrc"
+-'  78  0  ~/dot-files/vimrc
+|4,39,78,0,1482068340,"~/dot-files/vimrc"
 -'  1  0  ~/dot-files/vimrc
 |4,39,1,0,1482068322,"~/dot-files/vimrc"
 -'  1  0  ~/dot-files/vimrc
@@ -71,6 +122,42 @@
 |4,39,1,0,1482068322,"~/dot-files/vimrc"
 -'  1  0  ~/dot-files/vimrc
 |4,39,1,0,1482068322,"~/dot-files/vimrc"
+-'  1  0  ~/dot-files/vimrc
+|4,39,1,0,1482068322,"~/dot-files/vimrc"
+-'  1  0  ~/dot-files/vimrc
+|4,39,1,0,1482068322,"~/dot-files/vimrc"
+-'  1  0  ~/dot-files/vimrc
+|4,39,1,0,1482068322,"~/dot-files/vimrc"
+-'  1  0  ~/dot-files/vimrc
+|4,39,1,0,1482068322,"~/dot-files/vimrc"
+-'  1  0  ~/dot-files/vimrc
+|4,39,1,0,1482068322,"~/dot-files/vimrc"
+-'  1  0  ~/dot-files/vimrc
+|4,39,1,0,1482068322,"~/dot-files/vimrc"
+-'  1  0  ~/dot-files/vimrc
+|4,39,1,0,1482068322,"~/dot-files/vimrc"
+-'  1  0  ~/dot-files/vimrc
+|4,39,1,0,1482068322,"~/dot-files/vimrc"
+-'  1  0  ~/dot-files/vimrc
+|4,39,1,0,1482068322,"~/dot-files/vimrc"
+-'  1  0  ~/dot-files/vimrc
+|4,39,1,0,1482068322,"~/dot-files/vimrc"
+-'  1  0  ~/dot-files/vimrc
+|4,39,1,0,1482068322,"~/dot-files/vimrc"
+-'  1  0  ~/dot-files/vimrc
+|4,39,1,0,1482068322,"~/dot-files/vimrc"
+-'  15  12  ~/dot-files/.gitignore
+|4,39,15,12,1482068214,"~/dot-files/.gitignore"
+-'  15  12  ~/dot-files/.gitignore
+|4,39,15,12,1482068214,"~/dot-files/.gitignore"
+-'  13  12  ~/dot-files/.gitignore
+|4,39,13,12,1482068214,"~/dot-files/.gitignore"
+-'  13  12  ~/dot-files/.gitignore
+|4,39,13,12,1482068214,"~/dot-files/.gitignore"
+-'  13  12  ~/dot-files/.gitignore
+|4,39,13,12,1482068214,"~/dot-files/.gitignore"
+-'  13  12  ~/dot-files/.gitignore
+|4,39,13,12,1482068214,"~/dot-files/.gitignore"
 -'  15  12  ~/dot-files/.gitignore
 |4,39,15,12,1482068214,"~/dot-files/.gitignore"
 -'  13  12  ~/dot-files/.gitignore
@@ -89,18 +176,38 @@
 |4,39,1,0,1482068203,"~/dot-files/.gitignore"
 -'  1  0  ~/dot-files/.gitignore
 |4,39,1,0,1482068203,"~/dot-files/.gitignore"
+-'  1  0  ~/dot-files/.gitignore
+|4,39,1,0,1482068203,"~/dot-files/.gitignore"
+-'  1  0  ~/dot-files/.gitignore
+|4,39,1,0,1482068203,"~/dot-files/.gitignore"
+-'  1  0  ~/dot-files/.gitignore
+|4,39,1,0,1482068203,"~/dot-files/.gitignore"
+-'  1  0  ~/dot-files/.gitignore
+|4,39,1,0,1482068203,"~/dot-files/.gitignore"
 
 # History of marks within files (newest to oldest):
 
 > ~/dot-files/.gitignore
-	*	1482068429	0
-	"	13	24
-	^	13	25
-	.	13	24
+	*	1482077007	0
+	"	17	7
+	^	17	8
+	.	18	0
 	+	15	12
 	+	16	8
-	+	19	0
+	+	20	0
 	+	13	24
+	+	18	0
+
+> ~/dot-files/config/i3/i3status.conf
+	*	1482073040	0
+	"	1	0
+
+> ~/dot-files/ControlP
+	*	1482073035	0
+	"	3	0
+	.	2	0
+	+	1	0
+	+	2	0
 
 > ~/dot-files/vimrc
 	*	1482068338	0
