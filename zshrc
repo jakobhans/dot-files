@@ -99,7 +99,6 @@ alias ls='pwd; ls -a --color'
 alias lsl='pwd; ls -lahG --color | more'
 alias g='git'
 alias startx='ssh-agent startx'
-alias vi='vim'
 alias homestead='cd ~/Homestead && vagrant up & cd ~/'
 alias ht='htop --sort-key=PERCENT_CPU'
 
