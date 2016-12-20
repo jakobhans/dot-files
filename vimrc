@@ -33,7 +33,7 @@ let g:gruvbox_improved_warnings = 1
 
 " FuzzyFinder
 nnoremap <C-b> :FufBuffer<CR>
-nnoremap <C-f> :fufFile<CR>
+nnoremap <C-f> :FufFile<CR>
 
 " neocomplete
 let g:acp_enableAtStartup = 0

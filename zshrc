@@ -94,7 +94,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 #Own stuff
 #Aliases
-alias zshconfig='vi ~/.zshrc'
+alias zshconfig='vim ~/.zshrc'
 alias ls='pwd; ls -a --color'
 alias lsl='pwd; ls -lahG --color | more'
 alias g='git'
