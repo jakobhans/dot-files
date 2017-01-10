@@ -10,7 +10,6 @@ fi
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="bureau"
-#ZSH_THEME="avit"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -101,6 +100,10 @@ alias g='git'
 alias startx='ssh-agent startx'
 alias homestead='cd ~/Homestead && vagrant up & cd ~/'
 alias ht='htop --sort-key=PERCENT_CPU'
+alias xr1='xrandr --output HDMI-0 --off --output DP-1 --off --output DP-2 --off'
+alias xr2dp2='xrandr --output HDMI-0 --auto --output DP-2 --auto --left-of HDMI-0 --output DP-0 --off'
+alias xr2dp0='xrandr --output HDMI-0 --auto --output DP-0 --auto --left-of HDMI-0 --output DP-2 --off'
+alias xr3='xrandr --output DP-0 --auto --output HDMI-0 --auto --left-of DP-0 --output DP-2 --auto --left-of HDMI-0'
 
 #Description after some actions
 for c in cp rm chmod chown rename; do
