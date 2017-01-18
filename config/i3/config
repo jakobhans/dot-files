@@ -116,7 +116,8 @@ mode "Keyboard Layout - (S)panish / (E)nglish" {
 bindsym $mod+Shift+k mode "Keyboard Layout - (S)panish / (E)nglish"
 
 
-mode "Exit - (L)ogout, (R)eboot, (S)hutdown" {
+mode "Exit - S(u)spend, (L)ogout, (R)eboot, (S)hutdown" {
+    bindsym $mod+u exec systemctl suspend
     bindsym $mod+r exec systemctl reboot
     bindsym $mod+l exit
     bindsym $mod+s exec systemctl poweroff
@@ -124,7 +125,7 @@ mode "Exit - (L)ogout, (R)eboot, (S)hutdown" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+Shift+e mode "Exit - (L)ogout, (R)eboot, (S)hutdown"
+bindsym $mod+Shift+e mode "Exit - S(u)spend, (L)ogout, (R)eboot, (S)hutdown"
 
 # Custom stuff
 exec_always compton -f --config /home/jakobhans/.config/compton.conf
@@ -170,6 +171,7 @@ bar {
     position top
     height 27
     status_command py3status -c ~/.config/i3/i3status.conf
+    font pango: Consolas 9
     tray_output none
 }
 
