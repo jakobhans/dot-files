@@ -175,6 +175,8 @@ noremap <leader>q :bp<CR>
 noremap <leader>w :bn<CR>
 noremap Q gq
 
+set pastetoggle=<F10>
+
 au FocusLost * :wa
 
 au BufRead,BufNewFile *.blade.php set filetype=html
