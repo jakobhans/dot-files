@@ -94,7 +94,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # resize window (you can also use the mouse for that)
-mode "RESIZE" {
+mode "Resize" {
         
     bindsym Left resize shrink width 5 px or 5 ppt
     bindsym Down resize grow height 5 px or 5 ppt
@@ -104,7 +104,7 @@ mode "RESIZE" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "RESIZE"
+bindsym $mod+r mode "Resize"
 
 mode "Keyboard Layout - (S)panish / (E)nglish" {
     bindsym $mod+s exec setxkbmap es
@@ -126,6 +126,17 @@ mode "Exit - S(u)spend, (L)ogout, (R)eboot, (S)hutdown" {
     bindsym Escape mode "default"
 }
 bindsym $mod+Shift+e mode "Exit - S(u)spend, (L)ogout, (R)eboot, (S)hutdown"
+
+mode "Toggle Screens - (1) DP-0, (2) HDMI-0/DP-0, (3) HDMI-0/DP-2, (4) HDMI-0/DP-0/DP-2" {
+    bindsym $mod+1 exec xr1
+    bindsym $mod+2 exec xr2dp0
+    bindsym $mod+3 exec xr2dp2
+    bindsym $mod+4 exec xr3
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Shift+x mode "Toggle Screens - (1) DP-0, (2) HDMI-0/DP-0, (3) HDMI-0/DP-2, (4) HDMI-0/DP-0/DP-2"
 
 # Custom stuff
 exec_always compton -f --config /home/jakobhans/.config/compton.conf
