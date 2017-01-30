@@ -2,7 +2,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango: Consolas 9
+font pango: UbuntuMono 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -127,22 +127,23 @@ mode "Exit - S(u)spend, (L)ogout, (R)eboot, (S)hutdown" {
 }
 bindsym $mod+Shift+e mode "Exit - S(u)spend, (L)ogout, (R)eboot, (S)hutdown"
 
-mode "Toggle Screens - (1) DP-0, (2) HDMI-0/DP-0, (3) HDMI-0/DP-2, (4) HDMI-0/DP-0/DP-2" {
-    bindsym $mod+1 exec xr1
-    bindsym $mod+2 exec xr2dp0
-    bindsym $mod+3 exec xr2dp2
-    bindsym $mod+4 exec xr3
+mode "Toggle Screens - (D)P-0, (H)DMI-0/DP-0, HD(M)I-0/DP-2, (4) HDM(I)-0/DP-0/DP-2" {
+    bindsym $mod+d exec xrandr --output DP-0 --auto --output HDMI-0 --off --output DP-1 --off --output DP-2 --off
+    bindsym $mod+h exec xrandr --output HDMI-0 --auto --output DP-0 --auto --left-of HDMI-0 --output DP-2 --off
+    bindsym $mod+m exec xrandr --output HDMI-0 --auto --output DP-2 --auto --left-of HDMI-0 --output DP-0 --off
+    bindsym $mod+i exec xrandr --output DP-0 --auto --output HDMI-0 --auto --left-of DP-0 --output DP-2 --auto --left-of HDMI-0
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+Shift+x mode "Toggle Screens - (1) DP-0, (2) HDMI-0/DP-0, (3) HDMI-0/DP-2, (4) HDMI-0/DP-0/DP-2"
+bindsym $mod+Shift+x mode "Toggle Screens - (D)P-0, (H)DMI-0/DP-0, HD(M)I-0/DP-2, (4) HDM(I)-0/DP-0/DP-2"
 
 # Custom stuff
 exec_always compton -f --config /home/jakobhans/.config/compton.conf
 exec --no-startup-id pulseaudio --start
 exec --no-startup-id xrdb -load ~/.Xresources
 exec_always --no-startup-id feh --bg-fill /home/jakobhans/current-theme/bg.jpg
+exec --no-startup-id dropbox-cli start
 
 # Custom mappings
 # Volume
@@ -182,7 +183,7 @@ bar {
     position top
     height 27
     status_command py3status -c ~/.config/i3/i3status.conf
-    font pango: Consolas 9
+    font pango: UbuntuMono 9
     tray_output none
 }
 
