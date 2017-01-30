@@ -1,4 +1,6 @@
 ! Rofi
+rofi.font: UbuntuMono-Regular 14
+rofi.eh: 2
 rofi.padding: 350
 rofi.opacity: 95
 rofi.color-enabled: true
