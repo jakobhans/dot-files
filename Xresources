@@ -1,8 +1,7 @@
 ! Rofi
-rofi.font: UbuntuMono-Regular 14
+rofi.font: UbuntuMono 15
 rofi.eh: 2
-rofi.padding: 350
-rofi.opacity: 95
+rofi.padding: 300
 rofi.color-enabled: true
 rofi.color-window: #282828, #282828, #EBDBB2
 rofi.color-normal: #282828, #EBDBB2, #282828, #EBDBB2, #282828
@@ -26,7 +25,7 @@ URxvt.urgentOnBell: True
 URxvt.cursorBlink: False
 
 URxvt.font: xft:Inconsolata-9:antialias=true:autohinting=true
-URxvt.boldFont: xft:Inconsolata-9:bold:antialias=true:autohinting=true
+URxvt.boldFont: xft:Inconsolata-10:bold:antialias=true:autohinting=true
 URxvt.letterSpace: -1
 
 URxvt.depth: 32
