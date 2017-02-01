@@ -25,7 +25,7 @@ URxvt.urgentOnBell: True
 URxvt.cursorBlink: False
 
 URxvt.font: xft:Inconsolata-9:antialias=true:autohinting=true
-URxvt.boldFont: xft:Inconsolata-10:bold:antialias=true:autohinting=true
+URxvt.boldFont: xft:Inconsolata-9.5:bold:antialias=true:autohinting=true
 URxvt.letterSpace: -1
 
 URxvt.depth: 32
