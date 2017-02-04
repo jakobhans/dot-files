@@ -27,7 +27,9 @@ call plug#end()
 set background=dark
 hi CursorLine cterm=bold ctermbg=234
 colorscheme gruvbox
+let g:gruvbox_italic = 1
 let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_improved_strings = 1
 let g:gruvbox_number_columnt = 'bg4'
 let g:gruvbox_improved_warnings = 1
 
