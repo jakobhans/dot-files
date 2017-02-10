@@ -10,13 +10,12 @@ let g:mapleader = ","   " , is the map leader key
 " vim-plug section
 call plug#begin('~/.vim/autoload/')
 
-Plug 'Shougo/neocomplete.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'morhetz/gruvbox'
 Plug 'noahfrederick/vim-composer'
 Plug 'vim-utils/vim-man'
-Plug 'stephpy/vim-php-cs-fixer'
 Plug 'StanAngeloff/php.vim'
+Plug 'stephpy/vim-php-cs-fixer'
 Plug 'vim-scripts/L9'
 Plug 'vim-scripts/FuzzyFinder'
 Plug 'PotatoesMaster/i3-vim-syntax'
@@ -33,46 +32,12 @@ let g:gruvbox_improved_strings = 1
 let g:gruvbox_number_columnt = 'bg4'
 let g:gruvbox_improved_warnings = 1
 
+" Omnicomplete
+set omnifunc=syntaxcomplete#Complete
+
 " FuzzyFinder
 nnoremap <C-b> :FufBuffer<CR>
 nnoremap <C-f> :FufFile<CR>
-
-" neocomplete
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 2
-let g:neocomplete#lock_buffer_name_patern = '\*ku\*'
-let g:neocomplete#sources#dictionary#dictionaries = {
-    \ 'default' : '',
-    \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'
-    \}
-if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns = {}
-endif
-let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-inoremap <expr><C-g> neocomplete#undo_completion()
-inoremap <expr><C-l> neocomplete#complete_common_string()
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-    return neocomplete#close_popup() . "\<CR>"
-endfunction
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><C-h> necomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y> neocomplete#close_popup()
-inoremap <expr><C-e> neocomplete#close_popup()
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-if !exists('g:neocomplete#sources#omni#input_patterns')
-    let g:neocomplete#sources#omni#input_patterns = {}
-endif
-set omnifunc=syntaxcomplete#Complete
-set completeopt=longest,menuone
 
 " CtrlP
 let g:ctrlp_match_window = 'bottom,order:ttb'
