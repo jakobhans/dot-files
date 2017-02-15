@@ -95,7 +95,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 #Aliases
 alias zshconfig='vim ~/.zshrc'
 alias ls='pwd; ls -a --color'
-alias lsl='pwd; ls -lahG --color | more'
+alias lsl='pwd; ls -la --color | more'
 alias g='git'
 alias startx='ssh-agent startx'
 alias ht='htop --sort-key=PERCENT_CPU'
