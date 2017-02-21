@@ -127,7 +127,7 @@ mode "Exit - S(u)spend, (L)ogout, (R)eboot, (S)hutdown" {
 }
 bindsym $mod+Shift+e mode "Exit - S(u)spend, (L)ogout, (R)eboot, (S)hutdown"
 
-mode "Toggle Screens - (D)P-0, (H)DMI-0/DP-0, HD(M)I-0/DP-2, (4) HDM(I)-0/DP-0/DP-2" {
+mode "Toggle Screens - (D)P-0, (H)DMI-0/DP-0, HD(M)I-0/DP-2, HDM(I)-0/DP-0/DP-2" {
     bindsym $mod+d exec xrandr --output DP-0 --auto --output HDMI-0 --off --output DP-1 --off --output DP-2 --off
     bindsym $mod+h exec xrandr --output HDMI-0 --auto --output DP-0 --auto --left-of HDMI-0 --output DP-2 --off
     bindsym $mod+m exec xrandr --output HDMI-0 --auto --output DP-2 --auto --left-of HDMI-0 --output DP-0 --off
@@ -136,7 +136,7 @@ mode "Toggle Screens - (D)P-0, (H)DMI-0/DP-0, HD(M)I-0/DP-2, (4) HDM(I)-0/DP-0/D
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+Shift+x mode "Toggle Screens - (D)P-0, (H)DMI-0/DP-0, HD(M)I-0/DP-2, (4) HDM(I)-0/DP-0/DP-2"
+bindsym $mod+Shift+x mode "Toggle Screens - (D)P-0, (H)DMI-0/DP-0, HD(M)I-0/DP-2, HDM(I)-0/DP-0/DP-2"
 
 # Custom stuff
 exec_always compton -f --config /home/jakobhans/.config/compton.conf
