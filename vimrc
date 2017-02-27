@@ -161,6 +161,9 @@ set showmatch
 set ignorecase
 set smartcase
 set gdefault
+
+" Search
+set hlsearch
 set incsearch
 
 " Folding
@@ -169,6 +172,13 @@ set foldlevelstart=10
 set foldnestmax=10
 nnoremap <space> za
 set foldmethod=indent
+
+" Auto Commands
+" Auto load vimrc on save
+augroup autosourcing
+    autocmd!
+    autocmd BufWritePost .vimrc source %
+augroup END
 
 " General remappings
 inoremap <C-U> <C-G>u<C-U>
@@ -181,6 +191,9 @@ nnoremap ; :
 noremap <leader>q :bp<CR>
 noremap <leader>w :bn<CR>
 noremap Q gq
+
+" Split remapppings
+
 
 set pastetoggle=<F10>
 
