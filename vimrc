@@ -11,6 +11,8 @@ let g:mapleader = ","   " , is the map leader key
 call plug#begin('~/.vim/autoload/')
 
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-vinegar'
+Plug 'scrooloose/nerdtree'
 Plug 'morhetz/gruvbox'
 Plug 'noahfrederick/vim-composer'
 Plug 'vim-utils/vim-man'
@@ -82,7 +84,10 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " CtrlP
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_show_hidden = 1
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+let g:ctrlp_custom_ignore = 'node_modules\|git'
+
+" NERDTree
+let NERDTreeHijackNetrw = 0
 
 " statusline display 
 set statusline=%f                                   "tail of the filename
@@ -135,6 +140,7 @@ set mouse-=a
 set t_Co=256
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
+highlight LineNr ctermbg=NONE
 
 " Formatting, syntax and displaying
 set formatoptions=qrn1
@@ -168,6 +174,7 @@ set incsearch
 
 " Folding
 set foldenable
+set foldcolumn=2
 set foldlevelstart=10
 set foldnestmax=10
 nnoremap <space> za
@@ -192,8 +199,10 @@ noremap <leader>q :bp<CR>
 noremap <leader>w :bn<CR>
 noremap Q gq
 
-" Split remapppings
+nmap <leader>1 :NERDTreeToggle<CR>
+nmap <C-R> :CtrlPBufTag<CR>
 
+nmap <leader>f :tag<space>
 
 set pastetoggle=<F10>
 
@@ -211,3 +220,10 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
+
+" Notes
+" - zz to center screen
+" - :! issue CLI commands
+" - :!ctags -R to remake ctags
+" - Ctrl + ] to go to method with ctags
+" - Ctrl + 6 to go back to where the method was first seen

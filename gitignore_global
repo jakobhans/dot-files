@@ -16,3 +16,5 @@
 boxes/*
 acceptance_config.yml
 /vagrant-spec.config.rb
+
+tags
