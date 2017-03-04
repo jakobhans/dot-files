@@ -1,93 +1,48 @@
+" Setup stuff
 syntax on                                   " enable syntax processing
 filetype plugin indent on                   " load plugin and indent file for filetype                       
-set cursorline                              " highlight cursor line
 set viewoptions=cursor,folds,slash,unix     " saving cursor position, folds, slashes and unix EOL format
+set viminfo+=n~/.vim/viminfo
+set mouse-=a
 
 " Map Leader
 let mapleader = ","     " , is the map leader key
 let g:mapleader = ","   " , is the map leader key
 
-" vim-plug section
-call plug#begin('~/.vim/autoload/')
+so ~/.vim/plugins.vim
 
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'tpope/vim-vinegar'
-Plug 'scrooloose/nerdtree'
-Plug 'morhetz/gruvbox'
-Plug 'noahfrederick/vim-composer'
-Plug 'vim-utils/vim-man'
-Plug 'StanAngeloff/php.vim'
-Plug 'stephpy/vim-php-cs-fixer'
-Plug 'vim-scripts/L9'
-Plug 'PotatoesMaster/i3-vim-syntax'
-Plug 'shawncplus/phpcomplete.vim'
-Plug 'Shougo/neocomplete.vim'
-
-call plug#end()
-
-" color theme
-set background=dark
-hi CursorLine cterm=bold ctermbg=234
+" Colors
 colorscheme gruvbox
-let g:gruvbox_italic = 1
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_improved_strings = 1
-let g:gruvbox_number_columnt = 'bg4'
-let g:gruvbox_improved_warnings = 1
+set background=dark
+set cursorline                              " highlight cursor line
+hi CursorLine term=bold cterm=bold ctermbg=237
+set t_Co=256
 
-" Completions (Neocomplete + Omnicomplete)
-set omnifunc=syntaxcomplete#Complete
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-
-let g:neocomplete#sources#dictionary#dictionaries = {
-    \ 'default' : '',
-    \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'
-        \ }
- 
-" Enable heavy omni completion.
-if !exists('g:neocomplete#sources#omni#input_patterns')
-  let g:neocomplete#sources#omni#input_patterns = {}
-endif
-let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-
-" Plugin key-mappings.
-inoremap <expr><C-g>     neocomplete#undo_completion()
-inoremap <expr><C-l>     neocomplete#complete_common_string()
-
-" Recommended key-mappings.
-" <CR>: close popup and save indent.
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-  return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
-  " For no inserting <CR> key.
-  "return pumvisible() ? "\<C-y>" : "\<CR>"
-endfunction
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-" CtrlP
-let g:ctrlp_match_window = 'bottom,order:ttb'
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_custom_ignore = 'node_modules\|git'
-
-" NERDTree
-let NERDTreeHijackNetrw = 0
+" Formatting, syntax and displaying
+set formatoptions=qrn1
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set smartindent
+set autoindent
+set wrap
+set textwidth=79
+set history=50
+set scrolloff=3
+set laststatus=2
+set hidden
+set ruler
+set backspace=indent,eol,start
+set number
+set relativenumber
+set showcmd
+set wildmenu
+set lazyredraw
+set showmatch
+set ignorecase
+set smartcase
+set gdefault
 
 " statusline display 
 set statusline=%f                                   "tail of the filename
@@ -132,45 +87,12 @@ if exists("+undofile")
     set undofile
 endif
 
-" Misc
-set viminfo+=n~/.vim/viminfo
-set mouse-=a
-
-" Colors
-set t_Co=256
-highlight Normal ctermbg=NONE
-highlight nonText ctermbg=NONE
-highlight LineNr ctermbg=NONE
-
-" Formatting, syntax and displaying
-set formatoptions=qrn1
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-set smartindent
-set autoindent
-set wrap
-set textwidth=79
-set history=50
-set scrolloff=3
-set laststatus=2
-set hidden
-set ruler
-set backspace=indent,eol,start
-set number
-set relativenumber
-set showcmd
-set wildmenu
-set lazyredraw
-set showmatch
-set ignorecase
-set smartcase
-set gdefault
-
 " Search
 set hlsearch
 set incsearch
+
+" Autocomplete
+set complete=.,w,b,u
 
 " Folding
 set foldenable
@@ -184,32 +106,21 @@ set foldmethod=indent
 " Auto load vimrc on save
 augroup autosourcing
     autocmd!
-    autocmd BufWritePost .vimrc source %
+    autocmd BufWritePost vimrc source ~/.vimrc 
 augroup END
 
 " General remappings
-inoremap <C-U> <C-G>u<C-U>
-vnoremap / /\v
-nnoremap / /\v
 nnoremap <leader><space> :nohl<CR>
-nnoremap j gj
-nnoremap k gk
-nnoremap ; :
 noremap <leader>q :bp<CR>
 noremap <leader>w :bn<CR>
-noremap Q gq
 
 nmap <leader>1 :NERDTreeToggle<CR>
-nmap <C-R> :CtrlPBufTag<CR>
-
 nmap <leader>f :tag<space>
 
 set pastetoggle=<F10>
 
-au FocusLost * :wa
-
 au BufRead,BufNewFile *.blade.php set filetype=html
-au BufRead,BufNewFile filetype php set filetype=php.html
+au BufRead,BufNewFile filetype php set filetype=html
 
 " Remapping to remove arrows
 nnoremap <up> <nop>

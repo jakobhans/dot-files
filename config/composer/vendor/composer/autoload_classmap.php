@@ -6,6 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'CallbackFilterIterator' => $vendorDir . '/symfony/polyfill-php54/Resources/stubs/CallbackFilterIterator.php',
+    'RecursiveCallbackFilterIterator' => $vendorDir . '/symfony/polyfill-php54/Resources/stubs/RecursiveCallbackFilterIterator.php',
     'SebastianBergmann\\Diff\\Chunk' => $vendorDir . '/sebastian/diff/src/Chunk.php',
     'SebastianBergmann\\Diff\\Diff' => $vendorDir . '/sebastian/diff/src/Diff.php',
     'SebastianBergmann\\Diff\\Differ' => $vendorDir . '/sebastian/diff/src/Differ.php',
@@ -14,4 +16,5 @@ return array(
     'SebastianBergmann\\Diff\\LCS\\TimeEfficientImplementation' => $vendorDir . '/sebastian/diff/src/LCS/TimeEfficientLongestCommonSubsequenceImplementation.php',
     'SebastianBergmann\\Diff\\Line' => $vendorDir . '/sebastian/diff/src/Line.php',
     'SebastianBergmann\\Diff\\Parser' => $vendorDir . '/sebastian/diff/src/Parser.php',
+    'SessionHandlerInterface' => $vendorDir . '/symfony/polyfill-php54/Resources/stubs/SessionHandlerInterface.php',
 );
