@@ -33,6 +33,7 @@ let g:ctrlp_custom_ignore = 'node_modules\|git'
 
 " NERDTree
 let NERDTreeHijackNetrw = 0
+let NERDTreeShowHidden = 1
 
 " vim-php-namespace
 function! IPhpInsertUse()
