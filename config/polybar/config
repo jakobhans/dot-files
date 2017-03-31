@@ -9,7 +9,7 @@
 
 [colors]
 background = #282828
-background-alt = #665c54
+background-alt = #7c6f64
 foreground = #ebdbb2
 foreground-alt = #928374
 primary = #83a598
@@ -33,7 +33,7 @@ monitor = ${env:MONITOR}
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 6
 line-color = #f00
 
 border-size = 0
@@ -51,7 +51,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = 
-modules-right = filesystem volume xkeyboard memory cpu wlan eth battery temperature date
+modules-right = filesystem volume xkeyboard memory cpu wlan eth battery temperature date time
 
 tray-position = right
 tray-padding = 2
@@ -84,8 +84,13 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = root: %percentage_used%%
-label-unmounted = root not mounted
+format-mounted-prefix = " "
+format-mounted-prefix-foreground = ${colors.foreground-alt}
+label-mounted = %percentage_used%%
+
+format-unmounted-prefix = " "
+format-unmounted-prefix-foreground = ${colors.foreground-alt}
+label-unmounted = not mounted
 label-unmounted-foreground = ${colors.alert}
 
 [module/i3]
@@ -113,7 +118,7 @@ label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %name%
-label-visible-background = ${colors.background-alt}
+label-visible-background = ${colors.background}
 label-visible-underline = ${colors.primary}
 label-visible-padding = 2
 
@@ -177,9 +182,13 @@ type = internal/network
 interface = wlp3s0
 interval = 3.0
 
-format-connected =  <label-connected> <ramp-signal>
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.foreground-alt}
+format-connected = <label-connected>
 label-connected = %essid%
 
+format-disconnected-prefix = " "
+format-disconnected-prefix-foreground = ${colors.foreground-alt}
 format-disconnected = <label-disconnected>
 ;format-disconnected = <label-disconnected>
 format-disconnected-underline = ${colors.alert}
@@ -212,19 +221,37 @@ format-disconnected =
 type = internal/date
 interval = 5
 
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
 date = %d-%m-%Y
 date-alt = " %Y-%m-%d"
 
-time = %H:%M
+time = 
 time-alt = %H:%M:%S
 
-label = %date% / %time%
+label = %date%
+
+[module/time]
+type = internal/date
+interval = 5
+
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+date =
+date-alt = " %Y-%m-%d"
+
+time = %H:%M:%S 
+time-alt = %H:%M:%S
+
+label = %time%
 
 [module/volume]
 type = internal/volume
 
-format-volume = <label-volume> <bar-volume>
-label-volume = 
+format-volume = <bar-volume> <label-volume>
+format-volume-prefix = " " 
+format-volume-prefix-foreground = ${colors.foreground-alt}
+label-volume = %percentage%%
 label-volume-foreground = ${colors.foreground}
 
 format-muted-prefix = " "
