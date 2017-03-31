@@ -52,16 +52,16 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # Name the workspaces
-set $tag1 "1:www"
-set $tag2 "2:code"
-set $tag3 "3:term"
-set $tag4 "4:db/vm"
-set $tag5 "5:graphic"
-set $tag6 "6:coms"
-set $tag7 "7:org"
-set $tag8 "8:a/v"
-set $tag9 "9:vg"
-set $tag10 "10:other"
+set $tag1 "1:"
+set $tag2 "2:"
+set $tag3 "3:"
+set $tag4 "4:"
+set $tag5 "5:"
+set $tag6 "6:"
+set $tag7 "7:"
+set $tag8 "8:"
+set $tag9 "9:"
+set $tag10 "10:..."
 
 # switch to workspace
 bindsym $mod+1 workspace $tag1
@@ -139,7 +139,7 @@ mode "Toggle Screens - (D)P-0, (H)DMI-0/DP-0, HD(M)I-0/DP-2, HDM(I)-0/DP-0/DP-2"
 bindsym $mod+Shift+x mode "Toggle Screens - (D)P-0, (H)DMI-0/DP-0, HD(M)I-0/DP-2, HDM(I)-0/DP-0/DP-2"
 
 # Custom stuff
-#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id compton -f --config /home/jakobhans/.config/compton.conf
 exec --no-startup-id pulseaudio --start
 exec --no-startup-id xrdb -load ~/.Xresources
@@ -165,29 +165,6 @@ bindsym Print exec scrot -e 'mv $f ~/shared/Screenshots'
 # Lock with custom background
 bindsym $mod+l exec i3lock-fancy -p
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-    i3bar_command i3bar -t
-    colors {
-        background  #282828BB
-        statusline  #EBDBB2
-        separator   #928374
-
-#                           BORDER      BACKGROUND  TEXT
-        focused_workspace   #EBDBB2     #EBDBB2     #282828
-        active_workspace    #EBDBB2     #282828BB   #EBDBB2
-        inactive_workspace  #282828BB   #282828BB   #A89984
-        urgent_workspace    #282828BB   #282828BB   #EBDBB2
-    }
-
-    position top
-    height 27
-    status_command py3status -c ~/.config/i3/i3status.conf
-    font pango: UbuntuMono 10
-    tray_output none
-}
-
 #                       BORDER      BACKGROUND  TEXT        INDICATOR
 client.focused          #EBDBB2     #EBDBB2     #282828     #EBDBB2
 client.unfocused        #282828     #282828     #EBDBB2     #282828
@@ -204,6 +181,6 @@ new_float pixel 2
 
 # Styling
 gaps inner 15
-gaps outer 20
+gaps outer 5
 
 # vim:filetype=i3
