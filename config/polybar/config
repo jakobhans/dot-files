@@ -240,7 +240,7 @@ format-prefix-foreground = ${colors.foreground-alt}
 date =
 date-alt = " %Y-%m-%d"
 
-time = %H:%M:%S 
+time = %H:%M 
 time-alt = %H:%M:%S
 
 label = %time%
