@@ -163,7 +163,7 @@ bindsym XF86TouchpadToggle exec /usr/local/bin/touchpad_toggle.sh
 bindsym Print exec scrot -e 'mv $f ~/shared/Screenshots'
 
 # Lock with custom background
-bindsym $mod+l exec i3lock-fancy -p
+bindsym $mod+l exec $HOME/.config/i3/lockscript
 
 #                       BORDER      BACKGROUND  TEXT        INDICATOR
 client.focused          #EBDBB2     #EBDBB2     #282828     #EBDBB2
