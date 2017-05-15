@@ -51,10 +51,10 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = 
-modules-right = filesystem volume xkeyboard memory cpu wlan eth battery temperature date time
+modules-right = volume filesystem xkeyboard memory cpu wlan eth battery temperature date time
 
-tray-position = right
-tray-padding = 2
+;tray-position = right
+;tray-padding = 2
 ;tray-transparent = true
 ;tray-background = #0063ff
 
@@ -64,34 +64,6 @@ wm-restack = i3
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
-
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-
-label-layout = %layout%
-
-label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
-
-[module/filesystem]
-type = internal/fs
-interval = 25
-
-mount-0 = /
-
-format-mounted-prefix = " "
-format-mounted-prefix-foreground = ${colors.foreground-alt}
-label-mounted = %percentage_used%%
-
-format-unmounted-prefix = " "
-format-unmounted-prefix-foreground = ${colors.foreground-alt}
-label-unmounted = not mounted
-label-unmounted-foreground = ${colors.alert}
 
 [module/i3]
 type = internal/i3
@@ -123,45 +95,68 @@ label-visible-underline = ${colors.primary}
 label-visible-padding = 2
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %name%
+label-urgent = %name%!
 label-urgent-background = ${colors.background-alt}
 label-urgent-underline = ${colors.alert}
 label-urgent-padding = 2
 
-[module/mpd]
-type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+[module/volume]
+type = internal/volume
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+format-volume = <bar-volume> <label-volume>
+format-volume-prefix = " " 
+format-volume-prefix-foreground = ${colors.foreground-alt}
+label-volume = %percentage%%
+label-volume-foreground = ${colors.foreground}
 
-label-song-maxlen = 25
-label-song-ellipsis = true
+format-muted-prefix = " "
+format-muted-foreground = ${colors.foreground-alt}
+label-muted = muted
 
-[module/xbacklight]
-type = internal/xbacklight
+bar-volume-width = 10
+bar-volume-foreground-0 = ${colors.blue}
+bar-volume-foreground-1 = ${colors.blue}
+bar-volume-foreground-2 = ${colors.blue}
+bar-volume-foreground-3 = ${colors.blue}
+bar-volume-foreground-4 = ${colors.orange}
+bar-volume-foreground-5 = ${colors.red}
+bar-volume-foreground-6 = ${colors.red}
+bar-volume-gradient = false
+bar-volume-indicator = 
+bar-volume-indicator-font = 1
+bar-volume-fill = ─
+bar-volume-fill-font = 1
+bar-volume-empty = ─
+bar-volume-empty-font = 1
+bar-volume-empty-foreground = ${colors.foreground-alt}
 
-format = <label> <bar>
-label = BL
+[module/filesystem]
+type = internal/fs
+interval = 25
 
-bar-width = 10
-bar-indicator = |
-bar-indicator-foreground = #ff
-bar-indicator-font = 2
-bar-fill = ─
-bar-fill-font = 2
-bar-fill-foreground = #9f78e1
-bar-empty = ─
-bar-empty-font = 2
-bar-empty-foreground = ${colors.foreground-alt}
+mount-0 = /
 
-[module/backlight-acpi]
-inherit = module/xbacklight
-type = internal/backlight
-card = intel_backlight
+format-mounted-prefix = " "
+format-mounted-prefix-foreground = ${colors.foreground-alt}
+label-mounted = %percentage_used%%
+
+format-unmounted-prefix = " "
+format-unmounted-prefix-foreground = ${colors.foreground-alt}
+label-unmounted = not mounted
+label-unmounted-foreground = ${colors.alert}
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+
+label-layout = %layout%
+
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.secondary}
 
 [module/cpu]
 type = internal/cpu
@@ -213,67 +208,9 @@ label-connected = %local_ip%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
+format-disconnected-underline = ${colors.alert}
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
-
-[module/date]
-type = internal/date
-interval = 5
-
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-date = %d-%m-%Y
-date-alt = " %Y-%m-%d"
-
-time = 
-time-alt = %H:%M:%S
-
-label = %date%
-
-[module/time]
-type = internal/date
-interval = 5
-
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-date =
-date-alt = " %Y-%m-%d"
-
-time = %H:%M 
-time-alt = %H:%M:%S
-
-label = %time%
-
-[module/volume]
-type = internal/volume
-
-format-volume = <bar-volume> <label-volume>
-format-volume-prefix = " " 
-format-volume-prefix-foreground = ${colors.foreground-alt}
-label-volume = %percentage%%
-label-volume-foreground = ${colors.foreground}
-
-format-muted-prefix = " "
-format-muted-foreground = ${colors.foreground-alt}
-label-muted = muted
-
-bar-volume-width = 10
-bar-volume-foreground-0 = ${colors.blue}
-bar-volume-foreground-1 = ${colors.blue}
-bar-volume-foreground-2 = ${colors.blue}
-bar-volume-foreground-3 = ${colors.blue}
-bar-volume-foreground-4 = ${colors.orange}
-bar-volume-foreground-5 = ${colors.red}
-bar-volume-foreground-6 = ${colors.red}
-bar-volume-gradient = false
-bar-volume-indicator = 
-bar-volume-indicator-font = 1
-bar-volume-fill = ─
-bar-volume-fill-font = 1
-bar-volume-empty = ─
-bar-volume-empty-font = 1
-bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
@@ -304,11 +241,11 @@ animation-charging-framerate = 750
 
 [module/temperature]
 type = internal/temperature
-thermal-zone = 0
-warn-temperature = 70
+interval = 0.5
+thermal-zone = 1
+warn-temperature = 65
 
 format = <ramp> <label>
-format-underline = ${colors.blue}
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${colors.alert}
 
@@ -320,6 +257,34 @@ ramp-0 = 
 ramp-1 = 
 ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
+
+[module/date]
+type = internal/date
+interval = 5
+
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+date = %d-%m-%Y
+date-alt = " %Y-%m-%d"
+
+time = 
+time-alt = %H:%M:%S
+
+label = %date%
+
+[module/time]
+type = internal/date
+interval = 5
+
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+date =
+date-alt = " %Y-%m-%d"
+
+time = %H:%M 
+time-alt = %H:%M:%S
+
+label = %time%
 
 [settings]
 screenchange-reload = true
