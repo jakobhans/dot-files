@@ -105,8 +105,10 @@ alias xr1='xrandr --output DP-0 --auto --output HDMI-0 --off --output DP-1 --off
 alias xr2dp2='xrandr --output HDMI-0 --auto --output DP-2 --auto --left-of HDMI-0 --output DP-0 --off & ~/.config/polybar/launch.sh'
 alias xr2dp0='xrandr --output HDMI-0 --auto --output DP-0 --auto --left-of HDMI-0 --output DP-2 --off & ~/.config/polybar/launch.sh'
 alias xr3='xrandr --output DP-0 --auto --output HDMI-0 --auto --left-of DP-0 --output DP-2 --auto --left-of HDMI-0 & ~/.config/polybar/launch.sh'
-alias sshtunnelidxthemesdb='ssh forge@idxthemes.com -L 3306:127.0.0.1:3306 -N'
 
+sshtunnelmysql () {
+    ssh $* -L 3306:127.0.0.1:3306 -N;
+}
 #Description after some actions
 for c in cp rm chmod chown rename; do
     alias $c="pwd; $c -v"
