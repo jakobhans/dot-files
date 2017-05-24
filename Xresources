@@ -29,7 +29,7 @@ URxvt.boldFont: xft:Inconsolata-9:bold:antialias=true:autohinting=true
 URxvt.letterSpace: -1
 
 URxvt.depth: 32
-URxvt.background: [98]#282828
+URxvt.background: [85]#282828
 URxvt.foreground: #EBDBB2
 URxvt.color0:     #282828
 URxvt.color1:     #CC241D

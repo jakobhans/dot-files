@@ -161,6 +161,8 @@ bindsym XF86TouchpadToggle exec /usr/local/bin/touchpad_toggle.sh
 
 # Scrot as PrintScreen
 bindsym Print exec scrot -e 'mv $f ~/shared/Screenshots'
+# Scrot for Selected Area
+bindsym --release $mod+Print exec scrot -s -e 'mv $f ~/shared/Screenshots'
 
 # Lock with custom background
 bindsym $mod+l exec $HOME/.config/i3/lockscript

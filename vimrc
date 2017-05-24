@@ -92,7 +92,7 @@ set hlsearch
 set incsearch
 
 " Autocomplete
-set complete=.,w,b,u
+set complete=.,w,b,u,t,i
 
 " Folding
 set foldenable
