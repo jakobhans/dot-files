@@ -178,11 +178,11 @@ force_display_urgency_hint 0 ms
 
 # Gaps requirement
 
-new_window pixel 2
-new_float pixel 2
+new_window pixel 1
+new_float pixel 1
 
 # Styling
-gaps inner 15
-gaps outer 5
+gaps inner 12
+gaps outer -5
 
 # vim:filetype=i3
