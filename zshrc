@@ -93,8 +93,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 #Own stuff
 #Aliases
-alias ctagslaravel='ctags -R --exclude=node_modules'
-alias zshconfig='vim ~/.zshrc'
+alias ctagslaravel='ctags -R --exclude=node_modules --exclude=vendor'
 alias ls='pwd; ls -a --color'
 alias lsl='pwd; ls -la --color | more'
 alias g='git'
@@ -106,8 +105,9 @@ alias xr2dp2='xrandr --output HDMI-0 --auto --output DP-2 --auto --left-of HDMI-
 alias xr2dp0='xrandr --output HDMI-0 --auto --output DP-0 --auto --left-of HDMI-0 --output DP-2 --off & ~/.config/polybar/launch.sh'
 alias xr3='xrandr --output DP-0 --auto --output HDMI-0 --auto --left-of DP-0 --output DP-2 --auto --left-of HDMI-0 & ~/.config/polybar/launch.sh'
 
+#SSH Tunneling function
 sshtunnelmysql () {
-    ssh $* -L 3306:127.0.0.1:3306 -N;
+    ssh $1 -L $2:127.0.0.1:$2 -N;
 }
 #Description after some actions
 for c in cp rm chmod chown rename; do
