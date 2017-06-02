@@ -1,7 +1,3 @@
-if [[ $(git -C ~/dot-files rev-parse --abbrev-ref HEAD) != "arch" ]]; then
-    git -C ~/dot-files checkout arch
-fi
-
 # Path to your oh-my-zsh installation.
   export ZSH=$HOME/.oh-my-zsh
 
