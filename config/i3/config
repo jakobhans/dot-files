@@ -116,7 +116,8 @@ mode "Keyboard Layout - (S)panish / (E)nglish" {
 bindsym $mod+Shift+k mode "Keyboard Layout - (S)panish / (E)nglish"
 
 
-mode "Exit - S(u)spend, (L)ogout, (R)eboot, (S)hutdown" {
+mode "Exit - (H)ibernate, S(u)spend, (L)ogout, (R)eboot, (S)hutdown" {
+    bindsym $mod+h exec systemctl hibernate
     bindsym $mod+u exec systemctl suspend
     bindsym $mod+r exec systemctl reboot
     bindsym $mod+l exit
@@ -125,7 +126,7 @@ mode "Exit - S(u)spend, (L)ogout, (R)eboot, (S)hutdown" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+Shift+e mode "Exit - S(u)spend, (L)ogout, (R)eboot, (S)hutdown"
+bindsym $mod+Shift+e mode "Exit - (H)ibernate, S(u)spend, (L)ogout, (R)eboot, (S)hutdown"
 
 mode "Toggle Screens - (D)P-0, (H)DMI-0/DP-0, HD(M)I-0/DP-2, HDM(I)-0/DP-0/DP-2" {
     bindsym $mod+d exec xrandr --output DP-0 --auto --output HDMI-0 --off --output DP-1 --off --output DP-2 --off
