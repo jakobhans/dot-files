@@ -36,7 +36,7 @@ foreground = ${colors.foreground}
 line-size = 6
 line-color = #f00
 
-border-size = 7
+border-size = 0
 border-color = #00000000
 padding-left = 0
 padding-right = 2
@@ -218,10 +218,9 @@ adapter = AC
 full-at = 99
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+format-charging-underline = ${colors.green}
 
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
