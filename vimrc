@@ -38,9 +38,10 @@ set number
 set relativenumber
 set showcmd
 set wildmenu
+set wildmode=full
 set lazyredraw
 set showmatch
-set ignorecase
+set infercase
 set smartcase
 set gdefault
 
@@ -116,6 +117,9 @@ noremap <leader>w :bn<CR>
 
 nmap <leader>1 :NERDTreeToggle<CR>
 nmap <leader>f :tag<space>
+
+nnoremap <expr> j v:count ? 'j' : 'gj'
+nnoremap <expr> k v:count ? 'k' : 'gk'
 
 set pastetoggle=<F10>
 
