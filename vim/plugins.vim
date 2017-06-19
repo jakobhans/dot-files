@@ -3,10 +3,9 @@ call plug#begin('~/.vim/autoload/')
 
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree'
 Plug 'morhetz/gruvbox'
-Plug 'StanAngeloff/php.vim'
-Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'tpope/vim-surround'
 Plug 'arnaud-lb/vim-php-namespace'
 Plug 'ervandew/supertab'
@@ -14,6 +13,7 @@ Plug 'garbas/vim-snipmate'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'stephpy/vim-php-cs-fixer'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
@@ -50,6 +50,5 @@ autocmd FileType php inoremap <Leader>nf <Esc>:call IPhpExpandClass()<CR>
 autocmd FileType php noremap <Leader>nf :call PhpExpandClass()<CR>
 
 " vim-php-cs-fixer
-
 let g:php_cs_fixer_level = "psr2"
 nnoremap <silent><leader>pf :call PhpCsFixerFixFile()<CR>
