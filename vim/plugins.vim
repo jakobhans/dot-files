@@ -14,6 +14,7 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'sheerun/vim-polyglot'
+Plug 'vim-syntastic/syntastic'
 
 call plug#end()
 
@@ -52,3 +53,9 @@ autocmd FileType php noremap <Leader>nf :call PhpExpandClass()<CR>
 " vim-php-cs-fixer
 let g:php_cs_fixer_level = "psr2"
 nnoremap <silent><leader>pf :call PhpCsFixerFixFile()<CR>
+
+" syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
