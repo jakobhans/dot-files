@@ -57,6 +57,9 @@ set statusline+=%=                                  "left/right separator
 set statusline+=%c,                                 "cursor column
 set statusline+=%l/%L                               "cursor line/total lines
 set statusline+=\ %P                                "percent through file
+set statusline+=%#warningmsg#                       "warning messages
+set statusline+=%{SyntasticStatuslineFlag()}        "Syntastic flag
+set statusline+=%*                                  "End of syntastic flag
 
 " Backup 
 if isdirectory($HOME . '/.vim/backup') == 0
