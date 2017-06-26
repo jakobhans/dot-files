@@ -170,9 +170,9 @@ bindsym $mod+l exec $HOME/.config/i3/lockscript
 
 #                       BORDER      BACKGROUND  TEXT        INDICATOR
 client.focused          #EBDBB2     #EBDBB2     #282828     #EBDBB2
-client.unfocused        #A79770     #A79770     #A79770     #A79770
-client.focused_inactive #A79770     #A79770     #A79770     #A79770
-client.urgent           #FB4934     #FB4934     #EBDBB2     #FB4934
+client.unfocused        #A79770     #A79770     #282828     #A79770
+client.focused_inactive #A79770     #A79770     #282828     #A79770
+client.urgent           #FB4934     #FB4934     #282828     #FB4934
 
 workspace_auto_back_and_forth yes
 force_display_urgency_hint 0 ms
@@ -183,7 +183,7 @@ new_window pixel 3
 new_float pixel 3
 
 # Styling
-gaps inner 15
-gaps outer -5
+gaps inner 25
+gaps outer -15
 
 # vim:filetype=i3
