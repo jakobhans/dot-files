@@ -2,7 +2,7 @@
 call plug#begin('~/.vim/autoload/')
 
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'tpope/vim-vinegar'
+Plug 'bsdelf/bufferhint'
 Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree'
 Plug 'morhetz/gruvbox'
@@ -19,6 +19,10 @@ Plug 'vim-syntastic/syntastic'
 call plug#end()
 
 " Plugins preferences
+
+" BufferHint
+nnoremap - :call bufferhint#Popup()<CR>
+nnoremap \ :call bufferhint#LoadPrevious()
 
 " Gruvbox color theme
 let g:gruvbox_italic = 1
