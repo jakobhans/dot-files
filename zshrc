@@ -101,6 +101,9 @@ alias xr2dp2='xrandr --output HDMI-0 --auto --output DP-2 --auto --left-of HDMI-
 alias xr2dp0='xrandr --output HDMI-0 --auto --output DP-0 --auto --left-of HDMI-0 --output DP-2 --off & ~/.config/polybar/launch.sh'
 alias xr3='xrandr --output DP-0 --auto --output HDMI-0 --auto --left-of DP-0 --output DP-2 --auto --left-of HDMI-0 & ~/.config/polybar/launch.sh'
 
+#Temporary Alias to make vboxnet0 (Virtualbox network interface) work - https://bbs.archlinux.org/viewtopic.php?id=228365
+alias netvboxup='sudo ip link set dev vboxnet0 up'
+
 #SSH Tunneling function
 sshtunnelmysql () {
     ssh $1 -L $2:127.0.0.1:$2 -N;
