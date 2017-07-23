@@ -100,11 +100,11 @@ set complete=.,w,b,u,t,i
 
 " Folding
 set foldenable
+set foldmethod=indent
 set foldcolumn=2
 set foldlevelstart=10
 set foldnestmax=10
 nnoremap <space> za
-set foldmethod=indent
 
 " Auto Commands
 " Auto load vimrc on save
