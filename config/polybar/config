@@ -50,7 +50,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = 
-modules-right = volume filesystem xkeyboard memory cpu wlan eth battery temperature date time
+modules-right = volume filesystem xkeyboard wlan eth battery temperature date time
 
 ;tray-position = right
 ;tray-padding = 2
