@@ -44,22 +44,15 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = FontAwesome:pixelsize=12;0
-font-1 = UbuntuMono:pixelsize=12;0
+font-0 = FontAwesome:pixelsize=10;0
+font-1 = DroidSansMono:pixelsize=10;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center = 
 modules-right = volume filesystem xkeyboard wlan eth battery temperature date time
 
-;tray-position = right
-;tray-padding = 2
-;tray-transparent = true
-;tray-background = #0063ff
-
 wm-restack = i3
-
-;override-redirect = true
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -157,37 +150,18 @@ label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
 
-[module/cpu]
-type = internal/cpu
-interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-label = %percentage%%
-
-[module/memory]
-type = internal/memory
-interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-label = %percentage_used%%
-
 [module/wlan]
 type = internal/network
 interface = wlp3s0
 interval = 3.0
 
+format-connected-underline = ${colors.green}
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 format-connected = <label-connected>
-label-connected = %essid%
+label-connected = %essid% - %signal%%
 
-format-disconnected-prefix = " "
-format-disconnected-prefix-foreground = ${colors.foreground-alt}
-format-disconnected = <label-disconnected>
-;format-disconnected = <label-disconnected>
-format-disconnected-underline = ${colors.alert}
-label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+format-disconnected =
 
 ramp-signal-0 = 
 ramp-signal-1 = 
@@ -198,18 +172,15 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = vboxnet0
+interface = enp2s0f1
 interval = 3.0
 
 format-connected-underline = ${colors.green}
+format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
 format-disconnected =
-;format-disconnected = <label-disconnected>
-format-disconnected-underline = ${colors.alert}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
@@ -224,7 +195,6 @@ format-discharging = <ramp-capacity> <label-discharging>
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${colors.green}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -266,25 +236,18 @@ interval = 5
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-date = %d-%m-%Y
-date-alt = " %Y-%m-%d"
-
-time = 
-time-alt = %H:%M:%S
+date = %Y-%m-%d
 
 label = %date%
 
 [module/time]
 type = internal/date
-interval = 5
+interval = 1
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-date =
-date-alt = " %Y-%m-%d"
 
-time = %H:%M 
-time-alt = %H:%M:%S
+time = %H:%M:%S 
 
 label = %time%
 
