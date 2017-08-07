@@ -114,6 +114,8 @@
     # regardless of what this is set to.
     markup = full
 
+    plain_text = no
+
     # The format of the message.  Possible variables are:
     #   %a  appname
     #   %s  summary
