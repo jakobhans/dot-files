@@ -23,3 +23,6 @@ lftp/cwd_history
 lftp/rl_history
 lftp/transfer_log
 lftp/transfer_log.old
+
+# Other files
+.php_cs.cache
