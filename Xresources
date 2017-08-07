@@ -3,7 +3,7 @@ rofi.font: UbuntuMono 15
 rofi.eh: 2
 rofi.padding: 300
 rofi.color-enabled: true
-rofi.color-window: #D0282828, #282828, #EBDBB2
+rofi.color-window: #EF282828, #282828, #EBDBB2
 rofi.color-normal: #00282828, #EBDBB2, #00282828, #EBDBB2, #282828
 rofi.color-active: #00282828, #458588, #00282828, #458588, #282828
 rofi.color-urgent: #00282828, #FB4934, #00282828, #FB4934, #282828
