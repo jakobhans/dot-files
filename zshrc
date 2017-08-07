@@ -12,7 +12,7 @@ ZSH_THEME="bureau"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
+HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -30,7 +30,7 @@ ZSH_THEME="bureau"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -100,9 +100,6 @@ alias xr1='xrandr --output DP-0 --auto --output HDMI-0 --off --output DP-1 --off
 alias xr2dp2='xrandr --output HDMI-0 --auto --output DP-2 --auto --left-of HDMI-0 --output DP-0 --off & ~/.config/polybar/launch.sh'
 alias xr2dp0='xrandr --output HDMI-0 --auto --output DP-0 --auto --left-of HDMI-0 --output DP-2 --off & ~/.config/polybar/launch.sh'
 alias xr3='xrandr --output DP-0 --auto --output HDMI-0 --auto --left-of DP-0 --output DP-2 --auto --left-of HDMI-0 & ~/.config/polybar/launch.sh'
-
-#Temporary Alias to make vboxnet0 (Virtualbox network interface) work - https://bbs.archlinux.org/viewtopic.php?id=228365
-alias netvboxup='sudo ip link set dev vboxnet0 up'
 
 #SSH Tunneling function
 sshtunnelmysql () {
