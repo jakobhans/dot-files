@@ -159,7 +159,7 @@ format-connected-underline = ${colors.green}
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 format-connected = <label-connected>
-label-connected = %essid% - %signal%%
+label-connected = %signal%% - %essid%
 
 format-disconnected =
 
