@@ -56,7 +56,7 @@ autocmd FileType php noremap <Leader>nf :call PhpExpandClass()<CR>
 
 " vim-php-cs-fixer
 let g:php_cs_fixer_level = "psr2"
-nnoremap <silent><leader>pf :call PhpCsFixerFixFile()<CR>
+nnoremap <silent><Leader>pf :call PhpCsFixerFixFile()<CR>
 
 " syntastic
 let g:syntastic_always_populate_loc_list = 1
