@@ -3,7 +3,7 @@ syntax on                                   " enable syntax processing
 filetype plugin indent on                   " load plugin and indent file for filetype                       
 set viewoptions=cursor,folds,slash,unix     " saving cursor position, folds, slashes and unix EOL format
 set viminfo+=n~/.vim/viminfo
-set mouse-=a
+set mouse=a
 
 " Map Leader
 let mapleader = ","     " , is the map leader key
