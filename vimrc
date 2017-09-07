@@ -44,7 +44,7 @@ set showmatch
 set infercase
 set smartcase
 set gdefault
-set synmaxcol=256
+set synmaxcol=350
 
 " statusline display 
 set statusline=%f                                   "tail of the filename

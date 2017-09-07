@@ -22,7 +22,7 @@ call plug#end()
 
 " BufferHint
 nnoremap - :call bufferhint#Popup()<CR>
-nnoremap \ :call bufferhint#LoadPrevious()
+nnoremap \ :call bufferhint#LoadPrevious()<CR>
 
 " Gruvbox color theme
 let g:gruvbox_italic = 1
