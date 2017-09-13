@@ -24,8 +24,8 @@ URxvt.termName: xterm-256color
 URxvt.urgentOnBell: True
 URxvt.cursorBlink: False
 
-URxvt.font: xft:Consolas-9:antialias=true:autohinting=false
-URxvt.boldFont: xft:Consolas-9:bold:antialias=true:autohinting=false
+URxvt.font: xft:Consolas-10:antialias=true:autohinting=false
+URxvt.boldFont: xft:Consolas-10:bold:antialias=true:autohinting=false
 URxvt.letterSpace: -1
 
 URxvt.depth: 32
