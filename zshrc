@@ -95,6 +95,10 @@ alias lsl='pwd; ls -la --color | more'
 alias g='git'
 alias startx='ssh-agent startx'
 alias ht='htop --sort-key=PERCENT_CPU'
+alias pacrmorphans='sudo pacman -Rns $(pacman -Qtdq)'
+alias cowerupdate='cd ~/Downloads/AUR_Builds && cower -vdu'
+
+# Aliases for monitor output selection
 alias xr1='xrandr --output DP-0 --auto --output HDMI-0 --off --output DP-1 --off --output DP-2 --off & ~/.config/polybar/launch.sh'
 alias xr2dp2='xrandr --output HDMI-0 --auto --output DP-2 --auto --left-of HDMI-0 --output DP-0 --off & ~/.config/polybar/launch.sh'
 alias xr2dp0='xrandr --output HDMI-0 --auto --output DP-0 --auto --left-of HDMI-0 --output DP-2 --off & ~/.config/polybar/launch.sh'
