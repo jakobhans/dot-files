@@ -91,6 +91,9 @@ bindsym $mod+Shift+8 move container to workspace $tag8
 bindsym $mod+Shift+9 move container to workspace $tag9
 bindsym $mod+Shift+0 move container to workspace $tag10
 
+# Application classes
+for_window [class="Galculator"] floating enable
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
