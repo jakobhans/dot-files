@@ -49,8 +49,8 @@ font-1 = DroidSansMono:pixelsize=10;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = i3
-modules-center = 
-modules-right = volume filesystem xkeyboard wlan eth battery temperature date time
+modules-center =
+modules-right = volume filesystem xkeyboard vpncheck wlan eth battery temperature date time powermenu
 
 wm-restack = i3
 
@@ -257,5 +257,32 @@ screenchange-reload = true
 [global/wm]
 margin-top = 5
 margin-bottom = 5
+
+[module/vpncheck]
+type = custom/script
+exec = pgrep openvpn
+interval = 5
+label = VPN
+format-underline = ${colors.green}
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+
+[module/powermenu]
+type = custom/menu
+
+expand-right = false
+
+label-open = 
+label-close = 
+label-separator = |
+
+menu-0-0 = Logout
+menu-0-0-exec = exit
+menu-0-1 = Suspend
+menu-0-1-exec = systemctl suspend
+menu-0-2 = Reboot
+menu-0-2-exec = systemctl reboot
+menu-0-3 = poweroff
+menu-0-3-exec = systemctl poweroff
 
 ; vim:ft=dosini
