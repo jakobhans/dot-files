@@ -50,7 +50,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = i3
 modules-center =
-modules-right = volume filesystem xkeyboard vpncheck wlan eth battery temperature date time powermenu
+modules-right = volume filesystem xkeyboard vpncheck wlan eth battery temperature date time
 
 wm-restack = i3
 
@@ -159,7 +159,7 @@ format-connected-underline = ${colors.green}
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 format-connected = <label-connected>
-label-connected = %signal%% - %essid%, %downspeed%, %upspeed%
+label-connected = %signal%% - %essid%
 
 format-disconnected =
 
@@ -261,7 +261,7 @@ margin-bottom = 5
 [module/vpncheck]
 type = custom/script
 exec = pgrep openvpn
-interval = 5
+interval = 3
 label = VPN
 format-underline = ${colors.green}
 format-prefix = " "
@@ -273,16 +273,16 @@ type = custom/menu
 expand-right = false
 
 label-open = 
-label-close = 
+label-close = 
 label-separator = |
 
-menu-0-0 = Logout
+menu-0-0 = 
 menu-0-0-exec = exit
-menu-0-1 = Suspend
+menu-0-1 = 
 menu-0-1-exec = systemctl suspend
-menu-0-2 = Reboot
+menu-0-2 = 
 menu-0-2-exec = systemctl reboot
-menu-0-3 = poweroff
+menu-0-3 = 
 menu-0-3-exec = systemctl poweroff
 
 ; vim:ft=dosini
