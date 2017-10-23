@@ -1,8 +1,6 @@
 " vim-plug section
 call plug#begin('~/.vim/autoload/')
 
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'bsdelf/bufferhint'
 Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree'
 Plug 'morhetz/gruvbox'
@@ -15,25 +13,18 @@ Plug 'tomtom/tlib_vim'
 Plug 'stephpy/vim-php-cs-fixer'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-syntastic/syntastic'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
 " Plugins preferences
-
-" BufferHint
-nnoremap - :call bufferhint#Popup()<CR>
-nnoremap \ :call bufferhint#LoadPrevious()<CR>
 
 " Gruvbox color theme
 let g:gruvbox_italic = 1
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_improved_strings = 0
 let g:gruvbox_improved_warnings = 1
-
-" CtrlP
-let g:ctrlp_match_window = 'bottom,order:ttb'
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_custom_ignore = 'node_modules\|git'
 
 " NERDTree
 let NERDTreeHijackNetrw = 0
@@ -63,3 +54,29 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" fzf
+nmap - :Buffers<CR>
+nmap <C-P> :Files<CR>
+nmap <Leader>t :Tags<CR>
+
+let g:fzf_layout = { 'down': '~30%' }
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
