@@ -49,7 +49,7 @@ font-1 = DroidSansMono:size=10;0
 
 modules-left = i3
 modules-center =
-modules-right = volume filesystem xkeyboard vpncheck wlan eth battery temperature date time
+modules-right = volume filesystem_root filesystem_shared xkeyboard vpncheck wlan eth battery temperature date time
 
 wm-restack = i3
 
@@ -101,13 +101,28 @@ format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = MUTE
 
-[module/filesystem]
+[module/filesystem_root]
 type = internal/fs
 interval = 5
 
 mount-0 = /
 
-format-mounted-prefix = " "
+format-mounted-prefix = " / "
+format-mounted-prefix-foreground = ${colors.foreground-alt}
+label-mounted = %percentage_used%%
+
+format-unmounted-prefix = " "
+format-unmounted-prefix-foreground = ${colors.foreground-alt}
+label-unmounted = not mounted
+label-unmounted-foreground = ${colors.alert}
+
+[module/filesystem_shared]
+type = internal/fs
+interval = 5
+
+mount-0 = /home/jakobhans/shared
+
+format-mounted-prefix = "~/shared "
 format-mounted-prefix-foreground = ${colors.foreground-alt}
 label-mounted = %percentage_used%%
 
