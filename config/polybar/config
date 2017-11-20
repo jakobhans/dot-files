@@ -8,7 +8,7 @@
 ;=====================================================
 
 [colors]
-background = #A0282828
+background = #B0282828
 background-alt = #665c54
 foreground = #ebdbb2
 foreground-alt = #a89984
@@ -209,7 +209,7 @@ animation-charging-framerate = 750
 type = internal/temperature
 interval = 0.5
 thermal-zone = 1
-warn-temperature = 65
+warn-temperature = 75
 
 format = <ramp> <label>
 format-warn = <ramp> <label-warn>
