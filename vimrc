@@ -1,6 +1,7 @@
 " Setup stuff
-syntax on                                   " enable syntax processing
-filetype plugin indent on                   " load plugin and indent file for filetype                       
+if !has ('g:syntax_on')
+    syntax enable
+endif
 set viewoptions=cursor,folds,slash,unix     " saving cursor position, folds, slashes and unix EOL format
 set viminfo+=n~/.vim/viminfo
 set mouse=a
@@ -15,24 +16,20 @@ so ~/.vim/plugins.vim
 colorscheme gruvbox
 set background=dark
 set cursorline                              " highlight cursor line
-hi CursorLine term=bold cterm=bold ctermbg=237
+highlight CursorLine term=bold cterm=bold ctermbg=237
 set t_Co=256
 
 " Formatting, syntax and displaying
 set formatoptions=qrn1
 set tabstop=4
 set shiftwidth=4
-set softtabstop=4
 set expandtab
-set smartindent
-set autoindent
 set wrap
 set textwidth=79
 set history=50
 set scrolloff=3
 set laststatus=2
 set hidden
-set ruler
 set backspace=indent,eol,start
 set number
 set relativenumber
@@ -129,16 +126,6 @@ set pastetoggle=<F10>
 
 au BufRead,BufNewFile *.blade.php set filetype=html
 au BufRead,BufNewFile filetype php set filetype=html
-
-" Remapping to remove arrows
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
 
 " Notes
 " - zz to center screen
