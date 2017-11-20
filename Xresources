@@ -9,9 +9,9 @@ rofi.color-active: #00282828, #458588, #00282828, #458588, #282828
 rofi.color-urgent: #00282828, #FB4934, #00282828, #FB4934, #282828
 
 ! Fonts config
-Xft.dpi: 142
-Xft.autohint: 0
-Xft.lcdfilter:  lcddefault
+Xft.dpi: 96 
+Xft.autohint: 1
+Xft.lcdfilter:  lcdlight
 Xft.hintstyle:  hintfull
 Xft.hinting: 1
 Xft.antialias: 1
@@ -24,8 +24,8 @@ URxvt.termName: xterm-256color
 URxvt.urgentOnBell: True
 URxvt.cursorBlink: False
 
-URxvt.font: xft:Consolas-10:antialias=true:autohinting=false
-URxvt.boldFont: xft:Consolas-10:bold:antialias=true:autohinting=false
+URxvt.font: xft:Inconsolata-14,xft:Consolas-12,xft:Source Code Pro-10
+URxvt.boldFont: xft:Inconsolata-14:bold,xft:Consolas-12:bold,xft:Source Code Pro-10
 URxvt.letterSpace: -1
 
 URxvt.depth: 32
