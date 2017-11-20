@@ -15,6 +15,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vim-syntastic/syntastic'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
