@@ -57,7 +57,7 @@ bindsym $mod+a focus parent
 
 # Name the workspaces
 set $tag1 "1:"
-set $tag2 "2:{}"
+set $tag2 "2:"
 set $tag3 "3:"
 set $tag4 "4:"
 set $tag5 "5:"
@@ -140,7 +140,7 @@ mode "Toggle Screens - DP-(0), DP-(2), (H)DMI-0/DP-0, (D)P-2/DP-4, D(P)-0/DP-2/D
     bindsym $mod+2 exec xrandr --output DP-2 --auto --output HDMI-0 --off --output DP-0 --off --output DP-4 --off
     bindsym $mod+h exec xrandr --output HDMI-0 --auto --output DP-0 --auto --right-of HDMI-0 --output DP-2 --off --output DP-4 --off
     bindsym $mod+d exec xrandr --output DP-4 --auto --output DP-2 --auto --right-of DP-4 --output HDMI-0 --off --output DP-0 --off
-    bindsym $mod+i exec xrandr --output DP-0 --auto --output DP-2 --auto --left-of DP-0 --output DP4 --left-of DP-2 --output HDMI-0 --off
+    bindsym $mod+p exec xrandr --output DP-0 --auto --output DP-2 --auto --left-of DP-0 --output DP4 --left-of DP-2 --output HDMI-0 --off
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -148,9 +148,9 @@ mode "Toggle Screens - DP-(0), DP-(2), (H)DMI-0/DP-0, (D)P-2/DP-4, D(P)-0/DP-2/D
 bindsym $mod+Shift+x mode "Toggle Screens - DP-(0), DP-(2), (H)DMI-0/DP-0, (D)P-2/DP-4, D(P)-0/DP-2/DP-4"
 
 # Custom stuff
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id compton -b --config /home/jakobhans/.config/compton.conf
-exec --no-startup-id pulseaudio --start
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id pulseaudio --start
 exec --no-startup-id xrdb -load ~/.Xresources
 exec_always --no-startup-id feh --bg-fill /home/jakobhans/current-theme/bg.jpg
 exec --no-startup-id dropbox-cli start
