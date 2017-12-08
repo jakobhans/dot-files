@@ -57,15 +57,15 @@ bindsym $mod+a focus parent
 
 # Name the workspaces
 set $tag1 "1:"
-set $tag2 "2:"
+set $tag2 "2:"
 set $tag3 "3:"
 set $tag4 "4:"
-set $tag5 "5:"
-set $tag6 "6:"
-set $tag7 "7:"
-set $tag8 "8:"
+set $tag5 "5:"
+set $tag6 "6:"
+set $tag7 "7:"
+set $tag8 "8:"
 set $tag9 "9:"
-set $tag10 "10:..."
+set $tag10 "10:"
 
 # switch to workspace
 bindsym $mod+1 workspace $tag1
@@ -157,8 +157,10 @@ exec --no-startup-id dropbox-cli start
 
 # Custom mappings
 # Volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ +5%"
-bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ -5%"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ +1%"
+bindsym $mod+XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ +5%"
+bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ -1%"
+bindsym $mod+XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-mute @DEFAULT_SINK@ false ; pactl set-sink-volume @DEFAULT_SINK@ -5%"
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # Brightness

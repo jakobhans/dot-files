@@ -97,9 +97,10 @@ format-volume-prefix-foreground = ${colors.foreground-alt}
 label-volume = %percentage%%
 label-volume-foreground = ${colors.foreground}
 
-format-muted-prefix = " "
+format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = MUTE
+label-muted-foreground = ${colors.foreground}
 
 [module/filesystem_root]
 type = internal/fs
