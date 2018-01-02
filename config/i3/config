@@ -136,11 +136,11 @@ mode "Exit - (H)ibernate, S(u)spend, (L)ogout, (R)eboot, (S)hutdown" {
 bindsym $mod+Shift+e mode "Exit - (H)ibernate, S(u)spend, (L)ogout, (R)eboot, (S)hutdown"
 
 mode "Toggle Screens - DP-(0), DP-(2), (H)DMI-0/DP-0, (D)P-2/DP-4, D(P)-0/DP-2/DP-4" {
-    bindsym $mod+0 exec xrandr --output DP-0 --auto --output HDMI-0 --off --output DP-2 --off --output DP-4 --off
-    bindsym $mod+2 exec xrandr --output DP-2 --auto --output HDMI-0 --off --output DP-0 --off --output DP-4 --off
+    bindsym $mod+0 exec xrandr --output HDMI-0 --off --output DP-2 --off --output DP-4 --off --output DP-0 --auto
+    bindsym $mod+2 exec xrandr --output HDMI-0 --off --output DP-0 --off --output DP-4 --off --output DP-2 --auto
     bindsym $mod+h exec xrandr --output HDMI-0 --auto --output DP-0 --auto --right-of HDMI-0 --output DP-2 --off --output DP-4 --off
-    bindsym $mod+d exec xrandr --output DP-4 --auto --output DP-2 --auto --right-of DP-4 --output HDMI-0 --off --output DP-0 --off
-    bindsym $mod+p exec xrandr --output DP-0 --auto --output DP-2 --auto --left-of DP-0 --output DP4 --left-of DP-2 --output HDMI-0 --off
+    bindsym $mod+d exec xrandr --output HDMI-0 --off --output DP-4 --auto --output DP-2 --auto --right-of DP-4 --output DP-0 --off
+    bindsym $mod+p exec xrandr --output HDMI-0 --off --output DP-0 --auto --output DP-2 --auto --left-of DP-0 --output DP4 --left-of DP-2
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
