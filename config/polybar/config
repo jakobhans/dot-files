@@ -8,7 +8,7 @@
 ;=====================================================
 
 [colors]
-background = #B0282828
+background = #D0282828
 background-alt = #665c54
 foreground = #ebdbb2
 foreground-alt = #a89984
@@ -26,17 +26,18 @@ gray = #928374
 
 [bar/top]
 width = 100%
-height = 30
+height = 40
 fixed-center = false
 monitor = ${env:MONITOR}
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 4
 line-color = #f00
 
-border-size = 15
+border-top-size = 0
+border-bottom-size = 0
 border-color = #00000000
 padding-left = 0
 padding-right = 2
