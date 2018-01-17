@@ -191,6 +191,7 @@ force_display_urgency_hint 0 ms
 
 new_window pixel 3
 new_float pixel 3
+for_window [class=".*"] border pixel 3
 
 # Styling
 gaps inner 33
