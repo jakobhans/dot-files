@@ -197,7 +197,7 @@ new_float pixel 3
 for_window [class=".*"] border pixel 3
 
 # Styling
-gaps inner 33
+gaps inner 30
 gaps outer 0
 
 # vim:filetype=i3

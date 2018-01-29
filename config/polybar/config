@@ -8,8 +8,8 @@
 ;=====================================================
 
 [colors]
-background = #D0282828
-background-alt = #665c54
+background = #00282828
+background-alt = #66665c54
 foreground = #ebdbb2
 foreground-alt = #a89984
 primary = #83a598
@@ -27,7 +27,8 @@ gray = #928374
 [bar/top]
 width = 100%
 height = 40
-fixed-center = false
+bottom = false
+fixed-center = true
 monitor = ${env:MONITOR}
 
 background = ${colors.background}
@@ -44,7 +45,7 @@ border-color = #00000000
 padding-left = 0
 padding-right = 2
 
-module-margin-left = 1
+module-margin-left = 2
 module-margin-right = 2
 
 font-0 = FontAwesome:size=10;0
@@ -126,7 +127,7 @@ interval = 5
 
 mount-0 = /home/jakobhans/shared
 
-format-mounted-prefix = "~/shared "
+format-mounted-prefix = " ~/shared "
 format-mounted-prefix-foreground = ${colors.foreground-alt}
 label-mounted = %percentage_used%%
 
@@ -153,7 +154,7 @@ type = internal/network
 interface = wlp3s0
 interval = 3.0
 
-format-connected-underline = ${colors.green}
+format-connected-underline = ${colors.primary}
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 format-connected = <label-connected>
@@ -234,7 +235,7 @@ interval = 5
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-date = %Y-%m-%d
+date = %a %d %b,%Y
 
 label = %date%
 
@@ -245,7 +246,7 @@ interval = 1
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 
-time = %a %H:%M:%S 
+time = %H:%M:%S
 
 label = %time%
 
@@ -261,7 +262,7 @@ type = custom/script
 exec = pgrep openvpn
 interval = 5
 label = VPN
-format-underline = ${colors.green}
+format-underline = ${colors.primary}
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 
