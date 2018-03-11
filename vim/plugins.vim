@@ -51,6 +51,9 @@ let g:php_cs_fixer_level = "psr2"
 nnoremap <silent><Leader>pf :call PhpCsFixerFixFile()<CR>
 
 " syntastic
+let g:syntastic_loc_list_height = 5
+let g:syntastic_enable_balloons = 0
+let g:syntastic_enable_highlighting = 0
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
