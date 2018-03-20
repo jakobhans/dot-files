@@ -15,6 +15,7 @@ so ~/.vim/plugins.vim
 " Colors
 colorscheme gruvbox
 set background=dark
+let &t_ut=''
 set cursorline                              " highlight cursor line
 highlight CursorLine term=bold cterm=bold ctermbg=237
 set t_Co=256
