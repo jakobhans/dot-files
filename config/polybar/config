@@ -127,7 +127,7 @@ interval = 5
 
 mount-0 = /
 
-format-mounted-prefix = " / "
+format-mounted-prefix = "SSD (/) "
 format-mounted-prefix-foreground = ${colors.foreground-alt}
 label-mounted = %percentage_used%%
 
@@ -142,7 +142,7 @@ interval = 5
 
 mount-0 = /home/jakobhans/shared
 
-format-mounted-prefix = " ~/shared "
+format-mounted-prefix = " HD (~/shared) "
 format-mounted-prefix-foreground = ${colors.foreground-alt}
 label-mounted = %percentage_used%%
 
