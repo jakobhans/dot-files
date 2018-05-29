@@ -92,7 +92,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 #Own stuff
 #Aliases
-alias ctagslaravel='ctags -R --exclude=node_modules --exclude=vendor'
+alias ctagslaravel='ctags -R --exclude=node_modules'
 alias ls='pwd; ls -a --color'
 alias lsl='pwd; ls -la --color | more'
 alias g='git'
