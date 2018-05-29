@@ -11,16 +11,32 @@ Plug 'vim-syntastic/syntastic'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'Yggdroot/indentLine'
+Plug 'itchyny/lightline.vim'
+Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
-
-" Plugins preferences
 
 " Gruvbox color theme
 let g:gruvbox_italic = 1
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_improved_strings = 0
 let g:gruvbox_improved_warnings = 1
+
+" lightline
+let g:lightline = {
+    \ 'colorscheme': 'gruvbox',
+    \ 'active': {
+    \   'left': [[ 'mode', 'paste'],
+    \       ['gitbranch', 'readonly', 'filename', 'modified']],
+    \   'right': [['lineinfo'],
+    \       ['percent'],
+    \       ['fileformat', 'fileencoding', 'filetype']]
+    \ },
+    \ 'component_function': {
+    \   'gitbranch': 'fugitive#head'
+    \ }
+    \ }
 
 " NERDTree
 let NERDTreeQuitOnOpen = 1
