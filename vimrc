@@ -45,7 +45,8 @@ set gdefault
 set synmaxcol=350
 
 " statusline display 
-set statusline=%f                                   "tail of the filename
+set statusline=
+set statusline+=%f                                   "tail of the filename
 set statusline+=[%{strlen(&fenc)?&fenc:'none'},     "file encoding
 set statusline+=%{&ff}]                             "file format
 set statusline+=%#warningmsg#                       "warning messages
@@ -116,9 +117,6 @@ augroup END
 nnoremap <leader><space> :nohl<CR>
 noremap <leader>q :bp<CR>
 noremap <leader>w :bn<CR>
-
-nmap <leader>1 :NERDTreeToggle<CR>
-nmap <leader>f :tag<space>
 
 nnoremap <expr> j v:count ? 'j' : 'gj'
 nnoremap <expr> k v:count ? 'k' : 'gk'
