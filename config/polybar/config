@@ -304,8 +304,9 @@ type = custom/script
 exec = pgrep openvpn
 interval = 5
 label = VPN
-format-underline = ${colors.primary}
+format-underline = ${colors.aqua}
 format-prefix = " "
+format-suffix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 
 ; vim:ft=dosini
