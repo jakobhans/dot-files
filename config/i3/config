@@ -14,7 +14,7 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec rofi -show run -fullscreen -sidebar-mode
+bindsym $mod+d exec rofi -show run -fullscreen -sidebar-mode -run-list-command ". /usr/local/bin/rofi_aliases.sh" -run-command "/usr/bin/zsh -i -c '{cmd}'"
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left

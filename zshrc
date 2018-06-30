@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=$HOME/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # File sourcing
 . /etc/profile.d/fzf.zsh
@@ -52,7 +52,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=()
 
 # User configuration
 export GOPATH=$HOME/.gopath
@@ -92,20 +92,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 #Own stuff
 #Aliases
-alias ctagslaravel='ctags -R --exclude=node_modules'
-alias ls='pwd; ls -a --color'
-alias lsl='pwd; ls -la --color | more'
-alias g='git'
-alias startx='ssh-agent startx'
-alias ht='htop --sort-key=PERCENT_CPU'
-alias pacrmorphans='sudo pacman -Rns $(pacman -Qtdq)'
-alias cowerupdate='cd ~/Downloads/AUR_Builds && cower -vdu'
-
-# Aliases for monitor output selection
-alias xr1='xrandr --output DP-0 --auto --output HDMI-0 --off --output DP-1 --off --output DP-2 --off & ~/.config/polybar/launch.sh'
-alias xr2dp2='xrandr --output HDMI-0 --auto --output DP-2 --auto --left-of HDMI-0 --output DP-0 --off & ~/.config/polybar/launch.sh'
-alias xr2dp0='xrandr --output HDMI-0 --auto --output DP-0 --auto --left-of HDMI-0 --output DP-2 --off & ~/.config/polybar/launch.sh'
-alias xr3='xrandr --output DP-0 --auto --output HDMI-0 --auto --left-of DP-0 --output DP-2 --auto --left-of HDMI-0 & ~/.config/polybar/launch.sh'
+. ~/.zsh_aliases
 
 #SSH Tunneling function
 sshtunnelmysql () {

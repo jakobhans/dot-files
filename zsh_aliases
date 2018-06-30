@@ -1,0 +1,18 @@
+# General aliases
+alias ctags='ctags -R --exclude=node_modules'
+alias ls='pwd; ls -a --color'
+alias lsl='pwd; ls -la --color | more'
+alias g='git'
+alias startx='ssh-agent startx'
+alias ht='htop --sort-key=PERCENT_CPU'
+alias pacrmorphans='sudo pacman -Rns $(pacman -Qtdq)'
+alias extupdate='upgrade_oh_my_zsh; cd ~/Downloads/AUR_Builds && cower -vdu'
+alias gc-netflix='google-chrome-stable --force-device-scale-factor=1.1 --app=https://netflix.com'
+alias gc-music='google-chrome-stable --force-device-scale-factor=1.1 --app=https://music.google.com'
+alias gc-pocketcasts='google-chrome-stable --force-device-scale-factor=1.1 --app=https://play.pocketcasts.com'
+
+# Aliases for monitor output selection
+alias xr1='xrandr --output DP-0 --auto --output HDMI-0 --off --output DP-1 --off --output DP-2 --off & ~/.config/polybar/launch.sh'
+alias xr2dp2='xrandr --output HDMI-0 --auto --output DP-2 --auto --left-of HDMI-0 --output DP-0 --off & ~/.config/polybar/launch.sh'
+alias xr2dp0='xrandr --output HDMI-0 --auto --output DP-0 --auto --left-of HDMI-0 --output DP-2 --off & ~/.config/polybar/launch.sh'
+alias xr3='xrandr --output DP-0 --auto --output HDMI-0 --auto --left-of DP-0 --output DP-2 --auto --left-of HDMI-0 & ~/.config/polybar/launch.sh'
