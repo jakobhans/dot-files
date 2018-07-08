@@ -25,9 +25,9 @@ URxvt.termName: xterm-256color
 URxvt.urgentOnBell: True
 URxvt.cursorBlink: False
 
-URxvt.font: xft:Monaco-10,xft:DejaVu Sans Mono-11,xft:Hack-11,xft:Consolas-12,xft:Inconsolata-13,xft:Source Code Pro-10
-URxvt.boldFont: xft:Monaco-10:bold,xft:DejaVu Sans Mono-11:bold,xft:Hack-11:bold,xft:Consolas-12:bold,xft:Inconsolata-13:bold,xft:Source Code Pro-10
-!URxvt.letterSpace: -1
+URxvt.font: xft:DejaVu Sans Mono-11,xft:Hack-11,xft:Consolas-12,xft:Inconsolata-13,xft:Source Code Pro-10
+URxvt.boldFont: xft:DejaVu Sans Mono-11:bold,xft:Hack-11:bold,xft:Consolas-12:bold,xft:Inconsolata-13:bold,xft:Source Code Pro-10
+URxvt.letterSpace: -1
 
 URxvt.depth: 32
 URxvt.background: [85]#282828
