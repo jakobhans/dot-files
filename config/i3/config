@@ -155,7 +155,7 @@ exec --no-startup-id compton -b --config /home/jakobhans/.config/compton.conf
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id pulseaudio --start
 exec --no-startup-id xrdb -load ~/.Xresources
-exec_always --no-startup-id feh --bg-fill /home/jakobhans/current-theme/bg.png
+exec_always --no-startup-id feh --bg-fill /home/jakobhans/current-theme/bg.jpg
 exec --no-startup-id dropbox-cli start
 
 # Custom mappings
